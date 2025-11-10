@@ -87,7 +87,7 @@ export default function CalculatorIRRF() {
   return (
     <div className="h-full overflow-y-auto p-6 bg-gray-50">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
+        <h2 className="font-heading text-2xl font-bold text-gray-900 mb-2">
           Calculadora de IRRF
         </h2>
         <p className="text-gray-600 mb-6">
@@ -100,7 +100,7 @@ export default function CalculatorIRRF() {
             <div className="text-sm text-blue-800">
               <p className="font-medium mb-1">Fonte oficial:</p>
               <a
-                href="https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/tributos/irpf-imposto-de-renda-pessoa-fisica"
+                href="https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/tributos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-blue-900"
@@ -120,7 +120,7 @@ export default function CalculatorIRRF() {
             value={salary}
             onChange={(e) => setSalary(e.target.value)}
             placeholder="Ex: 5000.00"
-            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent mb-4"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent mb-4"
           />
 
           <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -132,12 +132,12 @@ export default function CalculatorIRRF() {
             onChange={(e) => setDependents(e.target.value)}
             placeholder="0"
             min="0"
-            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent mb-4"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent mb-4"
           />
 
           <button
             onClick={calculateIRRF}
-            className="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-200"
+            className="w-full bg-primary-600 text-white py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200"
           >
             Calcular
           </button>
@@ -145,7 +145,7 @@ export default function CalculatorIRRF() {
 
         {result && (
           <div className="bg-white rounded-lg shadow p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Resultado</h3>
+            <h3 className="font-heading text-lg font-semibold text-gray-900 mb-4">Resultado</h3>
             <div className="space-y-3">
               <div className="flex justify-between border-b border-gray-200 pb-2">
                 <span className="text-gray-700">Salário Bruto:</span>

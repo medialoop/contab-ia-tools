@@ -48,7 +48,7 @@ export default function CalculatorJuros() {
   return (
     <div className="h-full overflow-y-auto p-6 bg-gray-50">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">
+        <h2 className="font-heading text-2xl font-bold text-gray-900 mb-2">
           Calculadora de Juros sobre Tributos
         </h2>
         <p className="text-gray-600 mb-6">
@@ -80,8 +80,9 @@ export default function CalculatorJuros() {
             type="number"
             value={taxValue}
             onChange={(e) => setTaxValue(e.target.value)}
+            onKeyPress={(e) => e.key === 'Enter' && calculateInterest()}
             placeholder="Ex: 10000.00"
-            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent mb-4"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent mb-4"
           />
 
           <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -91,14 +92,15 @@ export default function CalculatorJuros() {
             type="number"
             value={daysLate}
             onChange={(e) => setDaysLate(e.target.value)}
+            onKeyPress={(e) => e.key === 'Enter' && calculateInterest()}
             placeholder="Ex: 90"
             min="1"
-            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent mb-4"
+            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent mb-4"
           />
 
           <button
             onClick={calculateInterest}
-            className="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-200"
+            className="w-full bg-primary-600 text-white py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200"
           >
             Calcular Juros
           </button>
@@ -106,7 +108,7 @@ export default function CalculatorJuros() {
 
         {result && (
           <div className="bg-white rounded-lg shadow p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">Resultado</h3>
+            <h3 className="font-heading text-lg font-semibold text-gray-900 mb-4">Resultado</h3>
             <div className="space-y-3">
               <div className="flex justify-between border-b border-gray-200 pb-2">
                 <span className="text-gray-700">Valor do Tributo:</span>
@@ -130,7 +132,7 @@ export default function CalculatorJuros() {
               </div>
               <div className="flex justify-between pt-2 border-t border-gray-300">
                 <span className="text-gray-900 font-semibold">Total a Pagar:</span>
-                <span className="font-bold text-indigo-600">R$ {result.total.toFixed(2)}</span>
+                <span className="font-bold text-primary-600">R$ {result.total.toFixed(2)}</span>
               </div>
             </div>
             <div className="mt-4 bg-gray-50 p-3 rounded-lg">

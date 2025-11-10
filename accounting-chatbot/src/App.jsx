@@ -3,6 +3,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Home from './pages/Home';
 import CategoryPage from './pages/CategoryPage';
+import CNAESearch from './pages/CNAESearch';
 
 function App() {
   return (
@@ -12,11 +13,18 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/nacionais" element={<CategoryPage />} />
-            <Route path="/estaduais" element={<CategoryPage />} />
-            <Route path="/municipais" element={<CategoryPage />} />
-            <Route path="/trabalhistas" element={<CategoryPage />} />
+            <Route path="/obrigacoes/nacionais" element={<CategoryPage />} />
+            <Route path="/obrigacoes/estaduais" element={<CategoryPage />} />
+            <Route path="/obrigacoes/municipais" element={<CategoryPage />} />
+            <Route path="/obrigacoes/trabalhistas" element={<CategoryPage />} />
             <Route path="/calculadoras" element={<CategoryPage />} />
+            <Route path="/calculadora-inss" element={<CategoryPage />} />
+            <Route path="/calculadora-irrf" element={<CategoryPage />} />
+            <Route path="/calculadora-simples" element={<CategoryPage />} />
+            <Route path="/calculadora-multa" element={<CategoryPage />} />
+            <Route path="/calculadora-juros" element={<CategoryPage />} />
+            <Route path="/calculadora-dimob" element={<CategoryPage />} />
+            <Route path="/cnae" element={<CNAESearch />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>

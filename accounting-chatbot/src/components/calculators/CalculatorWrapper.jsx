@@ -3,6 +3,7 @@ import CalculatorIRRF from './CalculatorIRRF';
 import CalculatorSimples from './CalculatorSimples';
 import CalculatorMulta from './CalculatorMulta';
 import CalculatorJuros from './CalculatorJuros';
+import CalculatorDIMOB from './CalculatorDIMOB';
 
 export default function CalculatorWrapper({ calculatorId }) {
   const calculators = {
@@ -11,6 +12,7 @@ export default function CalculatorWrapper({ calculatorId }) {
     'calc-simples': CalculatorSimples,
     'calc-multa': CalculatorMulta,
     'calc-juros': CalculatorJuros,
+    'calc-dimob': CalculatorDIMOB,
   };
 
   const CalculatorComponent = calculators[calculatorId];

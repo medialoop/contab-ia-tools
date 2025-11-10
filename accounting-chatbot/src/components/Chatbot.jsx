@@ -131,14 +131,14 @@ export default function Chatbot({ selectedObligation }) {
         <div
           className={`
             max-w-[80%] rounded-lg px-4 py-3
-            ${isBot ? 'bg-white border border-gray-200' : 'bg-indigo-600 text-white'}
+            ${isBot ? 'bg-white border border-gray-200' : 'bg-primary-600 text-white'}
             ${message.isTitle ? 'font-bold text-lg' : ''}
           `}
         >
           {isBot && !message.isTitle && (
             <div className="flex items-center mb-1">
-              <SparklesIcon className="w-4 h-4 text-indigo-600 mr-1" />
-              <span className="text-xs font-medium text-indigo-600">Assistente</span>
+              <SparklesIcon className="w-4 h-4 text-primary-600 mr-1" />
+              <span className="text-xs font-medium text-primary-600">Assistente</span>
             </div>
           )}
           <div className="prose prose-sm max-w-none">
@@ -154,7 +154,7 @@ export default function Chatbot({ selectedObligation }) {
                       href={linkMatch[2]}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-indigo-600 hover:text-indigo-800 underline"
+                      className="text-primary-600 hover:text-primary-800 underline"
                     >
                       {linkMatch[1]}
                     </a>
@@ -189,7 +189,7 @@ export default function Chatbot({ selectedObligation }) {
       <div className="h-full flex items-center justify-center p-8">
         <div className="text-center">
           <SparklesIcon className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-          <h3 className="text-lg font-medium text-gray-900 mb-2">
+          <h3 className="font-heading text-lg font-medium text-gray-900 mb-2">
             Selecione uma obrigação
           </h3>
           <p className="text-gray-600">
@@ -215,11 +215,11 @@ export default function Chatbot({ selectedObligation }) {
             onChange={(e) => setInputValue(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
             placeholder="Faça uma pergunta sobre esta obrigação..."
-            className="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            className="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
           />
           <button
             onClick={handleSendMessage}
-            className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-200 flex items-center"
+            className="bg-primary-600 text-white px-4 py-2 rounded-lg hover:bg-primary-700 transition-colors duration-200 flex items-center"
           >
             <PaperAirplaneIcon className="w-5 h-5" />
           </button>

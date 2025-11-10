@@ -10,7 +10,7 @@ export const obligationsData = {
         summary: 'A DCTFWeb é a declaração utilizada para confissão de débitos de contribuições previdenciárias, do IRRF (Imposto sobre a Renda Retido na Fonte) e de contribuições destinadas a terceiros, substituindo a GFIP (Guia de Recolhimento do FGTS e de Informações à Previdência Social) para este fim.',
         periodicity: 'Mensal - até o dia 15 do mês seguinte ao da ocorrência dos fatos geradores',
         legalBasis: 'Instrução Normativa RFB nº 2.005/2021',
-        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/dctfweb',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos',
         details: [
           'A DCTFWeb é obrigatória para todas as empresas que possuem empregados ou que tenham efetuado retenções de IRRF',
           'Deve ser transmitida mesmo quando não houver débitos a declarar (declaração sem débitos)',
@@ -44,7 +44,7 @@ export const obligationsData = {
         summary: 'A ECF é uma obrigação acessória anual que substitui a Declaração de Informações Econômico-Fiscais da Pessoa Jurídica (DIPJ). Nela devem ser informados todos os documentos e operações que fundamentam a apuração do IRPJ e da CSLL.',
         periodicity: 'Anual - até o último dia útil do mês de julho do ano seguinte',
         legalBasis: 'Instrução Normativa RFB nº 1.422/2013',
-        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/sped-sistema-publico-de-escrituracao-digital/escrituracao-contabil-fiscal-ecf',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/sped',
         details: [
           'Obrigatória para todas as pessoas jurídicas, inclusive imunes e isentas',
           'Empresas do Simples Nacional estão dispensadas',
@@ -78,7 +78,7 @@ export const obligationsData = {
         summary: 'A ECD é a escrituração contábil de forma digital das informações contábeis das empresas. Substitui a escrituração em papel e deve conter todos os registros de fatos contábeis de forma cronológica.',
         periodicity: 'Anual - até o último dia útil do mês de maio do ano seguinte',
         legalBasis: 'Instrução Normativa RFB nº 2.003/2021',
-        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/sped-sistema-publico-de-escrituracao-digital/escrituracao-contabil-digital-ecd',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/sped',
         details: [
           'Faz parte do projeto SPED (Sistema Público de Escrituração Digital)',
           'Obrigatória para empresas tributadas pelo Lucro Real',
@@ -112,7 +112,7 @@ export const obligationsData = {
         summary: 'A EFD-Contribuições é um arquivo digital que contém informações sobre as contribuições sociais PIS/PASEP e COFINS, escrituradas pelas pessoas jurídicas de direito privado na apuração das contribuições no regime não-cumulativo.',
         periodicity: 'Mensal - até o 10º dia útil do 2º mês subsequente',
         legalBasis: 'Instrução Normativa RFB nº 1.252/2012',
-        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/sped-sistema-publico-de-escrituracao-digital/escrituracao-fiscal-digital-da-contribuicao-para-o-pis-pasep-cofins-e-da-contribuicao-previdenciaria-sobre-a-receita-efd-contribuicoes',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/sped',
         details: [
           'Obrigatória para todas as pessoas jurídicas sujeitas à apuração de PIS/COFINS',
           'Deve conter informações sobre receitas, custos e créditos',
@@ -146,7 +146,7 @@ export const obligationsData = {
         summary: 'A DIRF é utilizada para informar à Receita Federal os valores de imposto de renda e contribuições retidos na fonte, além de informações sobre rendimentos pagos a pessoas físicas e jurídicas.',
         periodicity: 'Anual - até o último dia útil de fevereiro do ano seguinte',
         legalBasis: 'Instrução Normativa RFB nº 1.990/2020',
-        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/dirf',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos',
         details: [
           'Obrigatória para pessoas físicas e jurídicas que efetuaram retenções de IRRF',
           'Deve conter informações de rendimentos pagos e retenções efetuadas',
@@ -203,6 +203,244 @@ export const obligationsData = {
           }
         ]
       }
+    },
+    {
+      id: 'efd-reinf',
+      name: 'EFD-Reinf',
+      description: 'Escrituração Fiscal Digital de Retenções e Outras Informações Fiscais',
+      icon: 'DocumentMagnifyingGlassIcon',
+      content: {
+        title: 'EFD-Reinf - Retenções e Informações Fiscais',
+        summary: 'A EFD-Reinf complementa o eSocial e é utilizada para escrituração de rendimentos pagos e retenções de Imposto de Renda, Contribuição Social do contribuinte excedente ao teto do RGPS, retenções na fonte (PIS, COFINS, CSLL) incidentes sobre pagamentos diversos.',
+        periodicity: 'Mensal - varia conforme o grupo',
+        legalBasis: 'Instrução Normativa RFB nº 2.043/2021',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/sped',
+        details: [
+          'Substituiu a DIRF a partir de 2025',
+          'Deve ser transmitida por empresas que pagam ou creditam rendimentos com retenção',
+          'Complementa as informações do eSocial',
+          'Importante para apuração da DCTFWeb',
+          'Organizada em eventos específicos'
+        ],
+        faqs: [
+          {
+            question: 'Quem deve entregar a EFD-Reinf?',
+            answer: 'Pessoas jurídicas e físicas que pagaram ou creditaram rendimentos com retenção na fonte de IR, CSLL, PIS/PASEP e COFINS, além de contribuições previdenciárias sobre receita bruta.'
+          },
+          {
+            question: 'Qual o prazo de entrega?',
+            answer: 'O prazo varia conforme o grupo do contribuinte. Geralmente até o dia 15 do mês seguinte ao da ocorrência dos fatos geradores.'
+          },
+          {
+            question: 'A EFD-Reinf substitui a DIRF?',
+            answer: 'Sim, a partir de 2025 a DIRF foi descontinuada e suas informações passaram a ser prestadas exclusivamente através da EFD-Reinf e DCTFWeb.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'defis',
+      name: 'DEFIS',
+      description: 'Declaração de Informações Socioeconômicas e Fiscais',
+      icon: 'DocumentTextIcon',
+      content: {
+        title: 'DEFIS - Declaração Anual do Simples Nacional',
+        summary: 'A DEFIS é a declaração anual obrigatória para empresas optantes pelo Simples Nacional (exceto MEI). Deve ser entregue mesmo que a empresa não tenha tido movimento no ano.',
+        periodicity: 'Anual - até 31 de março do ano seguinte',
+        legalBasis: 'Lei Complementar nº 123/2006',
+        reference: 'http://www8.receita.fazenda.gov.br/SimplesNacional/',
+        details: [
+          'Obrigatória para todas as empresas do Simples Nacional',
+          'MEI entrega DASN-SIMEI ao invés da DEFIS',
+          'Deve ser entregue mesmo sem movimento',
+          'Contém informações econômicas e fiscais do ano-calendário',
+          'Permite retificar informações dos meses anteriores'
+        ],
+        faqs: [
+          {
+            question: 'Qual o prazo para entrega?',
+            answer: 'A DEFIS deve ser entregue até 31 de março do ano seguinte ao ano-calendário. Por exemplo, a DEFIS de 2024 deve ser entregue até 31/03/2025.'
+          },
+          {
+            question: 'O que acontece se não entregar?',
+            answer: 'A não entrega da DEFIS no prazo pode resultar na exclusão da empresa do Simples Nacional, além de multa por atraso.'
+          },
+          {
+            question: 'MEI precisa entregar DEFIS?',
+            answer: 'Não, o Microempreendedor Individual (MEI) deve entregar a DASN-SIMEI ao invés da DEFIS.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'dasn-simei',
+      name: 'DASN-SIMEI',
+      description: 'Declaração Anual do Simples Nacional para o MEI',
+      icon: 'UserIcon',
+      content: {
+        title: 'DASN-SIMEI - Declaração Anual do MEI',
+        summary: 'A DASN-SIMEI é a declaração anual obrigatória para Microempreendedores Individuais (MEI). Deve ser entregue mesmo que não tenha havido movimento ou faturamento no ano.',
+        periodicity: 'Anual - até 31 de maio do ano seguinte',
+        legalBasis: 'Resolução CGSN nº 140/2018',
+        reference: 'http://www8.receita.fazenda.gov.br/SimplesNacional/',
+        details: [
+          'Obrigatória para todos os MEI',
+          'Deve ser entregue mesmo sem faturamento',
+          'Informa a receita bruta do ano anterior',
+          'Necessária para manter o CNPJ regular',
+          'Essencial para acesso a benefícios previdenciários'
+        ],
+        faqs: [
+          {
+            question: 'Qual o prazo de entrega?',
+            answer: 'A DASN-SIMEI deve ser entregue até 31 de maio do ano seguinte ao ano-calendário. Por exemplo, a declaração de 2024 deve ser entregue até 31/05/2025.'
+          },
+          {
+            question: 'O que acontece se não entregar?',
+            answer: 'A não entrega pode resultar em multa, irregularidade do CNPJ e perda de benefícios previdenciários.'
+          },
+          {
+            question: 'Preciso declarar se não tive faturamento?',
+            answer: 'Sim, a DASN-SIMEI deve ser entregue mesmo sem faturamento, informando receita bruta zero.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'pgdas-d',
+      name: 'PGDAS-D',
+      description: 'Programa Gerador do DAS - Declaratório',
+      icon: 'CalculatorIcon',
+      content: {
+        title: 'PGDAS-D - Declaração e Cálculo do Simples Nacional',
+        summary: 'O PGDAS-D é o sistema utilizado pelas empresas do Simples Nacional para calcular e declarar mensalmente os valores devidos e gerar o DAS (Documento de Arrecadação do Simples Nacional).',
+        periodicity: 'Mensal - até o dia 20 do mês seguinte',
+        legalBasis: 'Resolução CGSN nº 140/2018',
+        reference: 'http://www8.receita.fazenda.gov.br/SimplesNacional/',
+        details: [
+          'Utilizado para calcular os tributos do Simples Nacional',
+          'Gera o DAS para pagamento',
+          'Deve ser transmitido mensalmente',
+          'Permite informar substituição tributária',
+          'Essencial para manter a regularidade no Simples'
+        ],
+        faqs: [
+          {
+            question: 'Qual o prazo para enviar o PGDAS-D?',
+            answer: 'O PGDAS-D deve ser enviado até o dia 20 do mês seguinte ao da competência. O pagamento do DAS vence no mesmo dia 20.'
+          },
+          {
+            question: 'E se não tiver faturamento no mês?',
+            answer: 'Mesmo sem faturamento, é necessário acessar o PGDAS-D e informar receita bruta zero para manter a regularidade.'
+          },
+          {
+            question: 'Posso retificar o PGDAS-D?',
+            answer: 'Sim, é possível retificar a declaração através do próprio sistema, mas é necessário gerar e pagar um novo DAS com eventuais diferenças.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'dirbi',
+      name: 'DIRBI',
+      description: 'Declaração de Incentivos, Renúncias, Benefícios e Imunidades',
+      icon: 'ScaleIcon',
+      content: {
+        title: 'DIRBI - Declaração de Benefícios Fiscais',
+        summary: 'A DIRBI é uma declaração que obriga as empresas a informar à Receita Federal os benefícios fiscais, incentivos, renúncias e imunidades tributárias que utilizam.',
+        periodicity: 'Semestral - até 30 de setembro e 31 de março',
+        legalBasis: 'Instrução Normativa RFB nº 2.198/2024',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos',
+        details: [
+          'Obrigatória para empresas que usufruem de benefícios fiscais',
+          'Deve detalhar todos os incentivos utilizados',
+          'Entrega semestral (janeiro a junho e julho a dezembro)',
+          'Primeira entrega em 2024 referente ao 2º semestre',
+          'Importante para transparência fiscal'
+        ],
+        faqs: [
+          {
+            question: 'Quem deve entregar a DIRBI?',
+            answer: 'Pessoas jurídicas que usufruírem de benefícios e incentivos de natureza tributária, inclusive sob a forma de isenção, redução de alíquota ou base de cálculo, crédito presumido, entre outros.'
+          },
+          {
+            question: 'Quais são os prazos?',
+            answer: 'Até 30 de setembro para o 1º semestre (janeiro a junho) e até 31 de março para o 2º semestre (julho a dezembro) do ano anterior.'
+          },
+          {
+            question: 'O que acontece se não entregar?',
+            answer: 'A não entrega ou entrega com incorreções pode resultar em multas e perda do direito ao benefício fiscal.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'dme',
+      name: 'DME',
+      description: 'Declaração de Operações Liquidadas com Moeda em Espécie',
+      icon: 'BanknotesIcon',
+      content: {
+        title: 'DME - Declaração de Operações em Espécie',
+        summary: 'A DME é utilizada para informar à Receita Federal operações liquidadas em espécie (dinheiro) cujo valor seja igual ou superior a R$ 30.000,00 ou o equivalente em outra moeda.',
+        periodicity: 'Mensal - até o último dia útil do mês seguinte',
+        legalBasis: 'Instrução Normativa RFB nº 1.761/2017',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos',
+        details: [
+          'Obrigatória para operações acima de R$ 30.000,00 em espécie',
+          'Visa combater lavagem de dinheiro e sonegação',
+          'Deve informar dados das partes envolvidas',
+          'Inclui operações de compra, venda, doação, etc.',
+          'Multas podem ser aplicadas em caso de não entrega'
+        ],
+        faqs: [
+          {
+            question: 'Qual o valor mínimo para declarar?',
+            answer: 'Devem ser declaradas operações em espécie de valor igual ou superior a R$ 30.000,00 ou o equivalente em outra moeda.'
+          },
+          {
+            question: 'Quem deve entregar?',
+            answer: 'Pessoas físicas e jurídicas residentes ou domiciliadas no Brasil que realizarem operações em espécie acima do limite estabelecido.'
+          },
+          {
+            question: 'Qual o prazo?',
+            answer: 'A DME deve ser apresentada até o último dia útil do mês subsequente àquele em que ocorreu a operação.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'decred',
+      name: 'DECRED',
+      description: 'Declaração de Créditos e Débitos de Tributos Federais',
+      icon: 'DocumentChartBarIcon',
+      content: {
+        title: 'DECRED - Declaração de Créditos e Débitos',
+        summary: 'A DECRED é uma declaração utilizada para informar créditos e débitos de tributos federais relacionados a operações específicas, incluindo créditos de PIS/COFINS não-cumulativo.',
+        periodicity: 'Semestral - conforme estabelecido pela RFB',
+        legalBasis: 'Instrução Normativa RFB específica',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos',
+        details: [
+          'Utilizada para declarar créditos fiscais',
+          'Importante para apuração de PIS/COFINS',
+          'Entrega semestral',
+          'Relacionada à EFD-Contribuições',
+          'Deve ser preenchida com atenção aos detalhes'
+        ],
+        faqs: [
+          {
+            question: 'Quem deve entregar?',
+            answer: 'Pessoas jurídicas que apuram créditos de tributos federais, especialmente relacionados a PIS e COFINS no regime não-cumulativo.'
+          },
+          {
+            question: 'Qual a periodicidade?',
+            answer: 'A DECRED é entregue semestralmente, conforme calendário estabelecido pela Receita Federal.'
+          },
+          {
+            question: 'Qual a relação com a EFD-Contribuições?',
+            answer: 'A DECRED complementa as informações da EFD-Contribuições, detalhando créditos apurados.'
+          }
+        ]
+      }
     }
   ],
   estaduais: [
@@ -216,7 +454,7 @@ export const obligationsData = {
         summary: 'A EFD-ICMS/IPI é um arquivo digital que constitui um conjunto de escriturações de documentos fiscais e de outras informações de interesse dos fiscos das unidades federadas e da Secretaria da Receita Federal do Brasil.',
         periodicity: 'Mensal - até o 15º dia do mês subsequente',
         legalBasis: 'Ajuste SINIEF 02/2009',
-        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/sped-sistema-publico-de-escrituracao-digital/escrituracao-fiscal-digital-efd-icms-ipi',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/sped',
         details: [
           'Substitui a escrituração de livros fiscais em papel',
           'Obrigatória para contribuintes do ICMS e/ou IPI',
@@ -284,7 +522,7 @@ export const obligationsData = {
         summary: 'O SINTEGRA é um sistema de informações interestaduais que permite o intercâmbio de informações fiscais entre as Secretarias de Fazenda dos estados. Foi amplamente substituído pela EFD-ICMS/IPI.',
         periodicity: 'Mensal - quando aplicável',
         legalBasis: 'Convênio ICMS 57/1995',
-        reference: 'https://www.confaz.fazenda.gov.br/',
+        reference: 'http://www.fazenda.gov.br/confaz',
         details: [
           'Utilizado para cruzamento de informações entre estados',
           'Praticamente substituído pela EFD-ICMS/IPI na maioria dos estados',
@@ -307,9 +545,111 @@ export const obligationsData = {
           }
         ]
       }
+    },
+    {
+      id: 'destda',
+      name: 'DeSTDA',
+      description: 'Declaração de Substituição Tributária, Diferencial de Alíquota e Antecipação',
+      icon: 'DocumentPlusIcon',
+      content: {
+        title: 'DeSTDA - Declaração de Substituição Tributária',
+        summary: 'A DeSTDA é uma obrigação acessória estadual que deve ser apresentada por empresas optantes pelo Simples Nacional que realizam operações com ICMS Substituição Tributária, diferencial de alíquotas e antecipação.',
+        periodicity: 'Mensal - até o dia 20 do mês seguinte',
+        legalBasis: 'Ajuste SINIEF 12/2015',
+        reference: 'Consulte a Secretaria da Fazenda do seu estado',
+        details: [
+          'Obrigatória para empresas do Simples Nacional com ICMS-ST',
+          'Contém informações sobre substituição tributária',
+          'Diferencial de alíquota entre estados',
+          'Antecipações de ICMS',
+          'Cada estado possui suas especificidades'
+        ],
+        faqs: [
+          {
+            question: 'Quem deve entregar a DeSTDA?',
+            answer: 'Empresas optantes pelo Simples Nacional que efetuam operações ou prestações com ICMS retido por substituição tributária, diferencial de alíquotas ou antecipação.'
+          },
+          {
+            question: 'Qual o prazo de entrega?',
+            answer: 'Geralmente até o dia 20 do mês seguinte ao da apuração, mas pode variar conforme o estado. Consulte a legislação estadual.'
+          },
+          {
+            question: 'Todos os estados exigem?',
+            answer: 'Não, nem todos os estados exigem a DeSTDA. Consulte a Secretaria da Fazenda do seu estado para verificar a obrigatoriedade.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'gia-st',
+      name: 'GIA-ST',
+      description: 'Guia de Informação e Apuração do ICMS Substituição Tributária',
+      icon: 'ClipboardDocumentCheckIcon',
+      content: {
+        title: 'GIA-ST - Guia de Apuração ICMS-ST',
+        summary: 'A GIA-ST é uma declaração estadual específica para informações relacionadas à substituição tributária do ICMS. É utilizada em alguns estados para controle das operações com ICMS-ST.',
+        periodicity: 'Mensal - conforme legislação estadual',
+        legalBasis: 'Legislação específica de cada estado',
+        reference: 'Consulte a Secretaria da Fazenda do seu estado',
+        details: [
+          'Específica para operações com ICMS-ST',
+          'Utilizada em alguns estados brasileiros',
+          'Complementa informações da EFD-ICMS/IPI',
+          'Prazos variam conforme o estado',
+          'Importante para contribuintes substitutos'
+        ],
+        faqs: [
+          {
+            question: 'Quem deve entregar a GIA-ST?',
+            answer: 'Contribuintes que realizam operações com ICMS Substituição Tributária, conforme exigência do estado. Nem todos os estados exigem esta declaração.'
+          },
+          {
+            question: 'Qual a diferença entre GIA e GIA-ST?',
+            answer: 'A GIA-ST é específica para operações com substituição tributária, enquanto a GIA regular abrange todas as operações com ICMS.'
+          },
+          {
+            question: 'Meu estado exige GIA-ST?',
+            answer: 'Consulte a Secretaria da Fazenda do seu estado. Muitos estados já migraram essas informações para a EFD-ICMS/IPI.'
+          }
+        ]
+      }
     }
   ],
   municipais: [
+    {
+      id: 'dimob',
+      name: 'DIMOB',
+      description: 'Declaração de Informações sobre Atividades Imobiliárias',
+      icon: 'HomeIcon',
+      content: {
+        title: 'DIMOB - Declaração de Informações sobre Atividades Imobiliárias',
+        summary: 'A DIMOB é uma declaração anual que deve ser apresentada por pessoas jurídicas e físicas que intermediam transações imobiliárias, administram imóveis, realizam incorporações, loteamentos ou construções de imóveis.',
+        periodicity: 'Anual - até o último dia útil de fevereiro do ano seguinte',
+        legalBasis: 'Instrução Normativa RFB nº 1.115/2010',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos',
+        details: [
+          'Obrigatória para imobiliárias, administradoras de imóveis, construtoras e incorporadoras',
+          'Deve informar operações de venda, compra e aluguel de imóveis',
+          'Inclui dados sobre comissões pagas na intermediação',
+          'A não entrega ou entrega em atraso está sujeita a multa',
+          'Transmitida através do programa gerador da Receita Federal'
+        ],
+        faqs: [
+          {
+            question: 'Quem deve entregar a DIMOB?',
+            answer: 'Pessoas jurídicas e físicas que tenham recebido valores relativos a intermediação na compra, venda ou aluguel de imóveis, administração de imóveis, incorporação, loteamento ou construção.'
+          },
+          {
+            question: 'Qual o prazo de entrega?',
+            answer: 'A DIMOB deve ser apresentada até o último dia útil de fevereiro do ano seguinte ao ano-calendário a que se referir a declaração.'
+          },
+          {
+            question: 'Qual a multa por atraso?',
+            answer: 'A multa é de R$ 500,00 por mês ou fração de atraso para pessoa jurídica inativa, e de R$ 1.500,00 por mês ou fração para pessoa jurídica ativa, limitada a 20% do valor das transações informadas.'
+          }
+        ]
+      }
+    },
     {
       id: 'nfse',
       name: 'NFS-e',
@@ -424,7 +764,7 @@ export const obligationsData = {
         summary: 'A RAIS é uma declaração anual que coleta dados sobre vínculos empregatícios e serve de base para estatísticas do trabalho, controle de benefícios e fiscalização. A partir de 2023, a RAIS foi substituída pelos eventos do eSocial para a maioria das informações.',
         periodicity: 'Anual - geralmente até março do ano seguinte',
         legalBasis: 'Decreto nº 76.900/1975',
-        reference: 'https://www.gov.br/trabalho-e-previdencia/pt-br/assuntos/rais',
+        reference: 'https://www.gov.br/trabalho-e-emprego/pt-br',
         details: [
           'A partir de 2023, foi substituída pelo eSocial para empregadores',
           'Ainda é exigida para casos específicos não contemplados no eSocial',
@@ -458,7 +798,7 @@ export const obligationsData = {
         summary: 'A GFIP era utilizada para recolher o FGTS e informar dados à Previdência Social. Foi substituída pela DCTFWeb para a confissão de débitos previdenciários, mas ainda é utilizada para o recolhimento do FGTS em casos específicos.',
         periodicity: 'Mensal - até o dia 7 do mês seguinte',
         legalBasis: 'Lei nº 8.036/1990 (FGTS) e legislação previdenciária',
-        reference: 'https://www.gov.br/trabalho-e-previdencia/pt-br/assuntos/previdencia-social/gfip',
+        reference: 'https://www.gov.br/trabalho-e-emprego/pt-br',
         details: [
           'Ainda utilizada para recolhimento de FGTS em situações específicas',
           'A parte previdenciária foi substituída pela DCTFWeb',
@@ -492,7 +832,7 @@ export const obligationsData = {
         summary: 'O CAGED era utilizado para registrar admissões e demissões de empregados. A partir de 2020, foi substituído pelo eSocial para a maioria dos empregadores. Ainda é utilizado para alguns casos específicos.',
         periodicity: 'Mensal - até o dia 7 do mês seguinte',
         legalBasis: 'Lei nº 4.923/1965',
-        reference: 'https://www.gov.br/trabalho-e-previdencia/pt-br/assuntos/emprego-e-desemprego/caged',
+        reference: 'https://www.gov.br/trabalho-e-emprego/pt-br',
         details: [
           'Substituído pelo eSocial para empregadores obrigados ao eSocial',
           'Serve de base para estatísticas de emprego',
@@ -557,43 +897,57 @@ export const obligationsData = {
       name: 'Calculadora INSS',
       description: 'Cálculo de contribuição ao INSS (empregado e empresa)',
       icon: 'CalculatorIcon',
-      type: 'calculator'
+      type: 'calculator',
+      path: '/calculadora-inss'
     },
     {
       id: 'calc-irrf',
       name: 'Calculadora IRRF',
       description: 'Cálculo de Imposto de Renda Retido na Fonte',
       icon: 'CalculatorIcon',
-      type: 'calculator'
+      type: 'calculator',
+      path: '/calculadora-irrf'
     },
     {
       id: 'calc-simples',
       name: 'Simples Nacional',
       description: 'Estimativa de tributação pelo Simples Nacional',
       icon: 'CalculatorIcon',
-      type: 'calculator'
+      type: 'calculator',
+      path: '/calculadora-simples'
     },
     {
       id: 'calc-multa',
       name: 'Multa por Atraso',
       description: 'Cálculo de multa por atraso na entrega de obrigações',
       icon: 'CalculatorIcon',
-      type: 'calculator'
+      type: 'calculator',
+      path: '/calculadora-multa'
     },
     {
       id: 'calc-juros',
       name: 'Juros sobre Tributos',
       description: 'Cálculo de juros sobre tributos em atraso',
       icon: 'CalculatorIcon',
-      type: 'calculator'
+      type: 'calculator',
+      path: '/calculadora-juros'
+    },
+    {
+      id: 'calc-dimob',
+      name: 'Multa DIMOB',
+      description: 'Cálculo de multa por atraso na entrega da DIMOB',
+      icon: 'CalculatorIcon',
+      type: 'calculator',
+      path: '/calculadora-dimob'
     }
   ]
 };
 
 export const categories = [
-  { id: 'nacionais', name: 'Nacionais', path: '/nacionais' },
-  { id: 'estaduais', name: 'Estaduais', path: '/estaduais' },
-  { id: 'municipais', name: 'Municipais', path: '/municipais' },
-  { id: 'trabalhistas', name: 'Trabalhistas', path: '/trabalhistas' },
+  { id: 'nacionais', name: 'Obrigações Nacionais', path: '/obrigacoes/nacionais' },
+  { id: 'estaduais', name: 'Obrigações Estaduais', path: '/obrigacoes/estaduais' },
+  { id: 'municipais', name: 'Obrigações Municipais', path: '/obrigacoes/municipais' },
+  { id: 'trabalhistas', name: 'Obrigações Trabalhistas', path: '/obrigacoes/trabalhistas' },
   { id: 'calculadoras', name: 'Calculadoras', path: '/calculadoras' },
+  { id: 'cnae', name: 'Consulta CNAE', path: '/cnae' },
 ];
