@@ -45,8 +45,19 @@ export default function Home() {
 
       <div className="flex-1 overflow-y-auto">
         {/* Hero Section */}
-        <div className="bg-gradient-to-r from-primary-500 to-primary-900 text-white py-12 md:py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative bg-gray-900 text-white py-12 md:py-16 overflow-hidden">
+          {/* Background Image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: "url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2000&auto=format&fit=crop')",
+            }}
+          />
+          {/* Gradient Overlay at 85% opacity */}
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-900 opacity-85" />
+
+          {/* Content */}
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
               Assistente Contábil Inteligente
             </h1>
