@@ -29,13 +29,7 @@ export default function Home() {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      // For now, redirect to calculadoras or nacionais based on query
-      const query = searchQuery.toLowerCase();
-      if (query.includes('calcul') || query.includes('inss') || query.includes('irrf')) {
-        navigate('/calculadoras');
-      } else {
-        navigate('/nacionais');
-      }
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
     }
   };
 

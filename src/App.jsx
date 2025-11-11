@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import CategoryPage from './pages/CategoryPage';
 import CNAESearch from './pages/CNAESearch';
+import SearchResults from './pages/SearchResults';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/search" element={<SearchResults />} />
             <Route path="/obrigacoes/nacionais" element={<CategoryPage />} />
             <Route path="/obrigacoes/estaduais" element={<CategoryPage />} />
             <Route path="/obrigacoes/municipais" element={<CategoryPage />} />
