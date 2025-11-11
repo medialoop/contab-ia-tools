@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from '@dr.pogodin/react-helmet';
 import ObligationCard from '../components/ObligationCard';
 import Chatbot from '../components/Chatbot';
 import CalculatorWrapper from '../components/calculators/CalculatorWrapper';
