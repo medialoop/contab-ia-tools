@@ -441,6 +441,49 @@ export const obligationsData = {
           }
         ]
       }
+    },
+    {
+      id: 'e-bef',
+      name: 'e-BEF',
+      description: 'Formulário Digital de Beneficiários Finais',
+      icon: 'UserGroupIcon',
+      content: {
+        title: 'e-BEF - Formulário Digital de Beneficiários Finais',
+        summary: 'O e-BEF é uma nova obrigação acessória criada pela Receita Federal para identificar pessoas naturais que, direta ou indiretamente, exercem controle ou influência significativa sobre entidades. Visa combater lavagem de dinheiro, ocultação de patrimônio e alinhar o Brasil às recomendações internacionais do GAFI e da OCDE.',
+        periodicity: 'Anual - até o final do ano-calendário, ou quando houver alterações',
+        legalBasis: 'Instrução Normativa RFB nº 2.290/2025',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos',
+        details: [
+          'Obrigação nova com vigência a partir de 1º de janeiro de 2026',
+          'Identifica beneficiários finais de entidades (pessoas que exercem controle)',
+          'Preenchimento via sistema e-CAC com assinatura digital',
+          'Deve ser atualizado sempre que houver mudança nos beneficiários',
+          'A não entrega ou entrega com erros resulta em suspensão do CNPJ',
+          'Implementação gradual: 2026 (grandes empresas), 2027 (empresas com faturamento > R$ 78 milhões), 2028 (empresas > R$ 4,8 milhões)'
+        ],
+        faqs: [
+          {
+            question: 'Quem deve apresentar o e-BEF?',
+            answer: 'Sociedades civis e comerciais, associações, cooperativas, fundações, entidades domiciliadas no exterior e fundos de investimento devem apresentar. A obrigatoriedade é gradual: grandes empresas já em 2026, empresas com faturamento acima de R$ 78 milhões em 2027, e empresas acima de R$ 4,8 milhões em 2028.'
+          },
+          {
+            question: 'Qual o prazo de entrega?',
+            answer: 'O formulário deve ser apresentado anualmente até o final do ano-calendário. Além disso, deve ser atualizado sempre que houver mudança nos beneficiários finais da entidade.'
+          },
+          {
+            question: 'O que acontece se não entregar?',
+            answer: 'A não apresentação do e-BEF ou a apresentação com erros ou omissões resultará na suspensão do CNPJ, impedindo a entidade de operar com instituições financeiras e realizar diversas operações empresariais.'
+          },
+          {
+            question: 'O que é um beneficiário final?',
+            answer: 'Beneficiário final é a pessoa natural que, em última instância, direta ou indiretamente, possui, controla ou influencia significativamente a entidade. É quem efetivamente detém o poder de decisão sobre a empresa, mesmo que não apareça formalmente na estrutura societária.'
+          },
+          {
+            question: 'Como enviar o e-BEF?',
+            answer: 'O formulário deve ser preenchido através do sistema e-CAC (Centro Virtual de Atendimento) da Receita Federal, com assinatura digital dos responsáveis legais pela entidade.'
+          }
+        ]
+      }
     }
   ],
   estaduais: [
