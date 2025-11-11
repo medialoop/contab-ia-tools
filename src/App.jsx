@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider } from '@dr.pogodin/react-helmet';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import CategoryPage from './pages/CategoryPage';
 import CNAESearch from './pages/CNAESearch';
@@ -29,6 +30,7 @@ function App() {
             <Route path="/cnae" element={<CNAESearch />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
+          <Footer />
         </div>
       </Router>
     </HelmetProvider>
