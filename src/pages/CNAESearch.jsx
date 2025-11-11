@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from '@dr.pogodin/react-helmet';
 import { MagnifyingGlassIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
 
 export default function CNAESearch() {
