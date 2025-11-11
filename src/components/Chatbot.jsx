@@ -15,6 +15,7 @@ export default function Chatbot({ selectedObligation }) {
   }, [messages]);
 
   useEffect(() => {
+    // Reset messages when obligation changes (syncing with external state)
     if (selectedObligation && selectedObligation.content) {
       const content = selectedObligation.content;
       const initialMessages = [
@@ -51,6 +52,7 @@ export default function Chatbot({ selectedObligation }) {
         });
       }
 
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setMessages(initialMessages);
     } else {
       setMessages([]);
