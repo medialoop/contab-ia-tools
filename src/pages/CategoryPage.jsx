@@ -35,10 +35,16 @@ export default function CategoryPage() {
     // If this is a specific calculator URL, auto-select it
     if (isSpecificCalculator && specificCalculator) {
       setSelectedItem(specificCalculator);
+    } else if (location.state?.selectedObligationId) {
+      // If coming from search results, auto-select the specified obligation
+      const obligation = categoryData.find(item => item.id === location.state.selectedObligationId);
+      if (obligation) {
+        setSelectedItem(obligation);
+      }
     } else {
       setSelectedItem(null);
     }
-  }, [category, isSpecificCalculator, specificCalculator]);
+  }, [category, isSpecificCalculator, specificCalculator, location.state?.selectedObligationId, categoryData]);
 
   const handleSelectItem = (item) => {
     setSelectedItem(item);
