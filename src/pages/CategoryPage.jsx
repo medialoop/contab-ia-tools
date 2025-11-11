@@ -32,8 +32,9 @@ export default function CategoryPage() {
   const categoryInfo = categories.find(c => c.id === category);
 
   useEffect(() => {
-    // If this is a specific calculator URL, auto-select it
+    // Reset selection when URL changes (syncing with router state)
     if (isSpecificCalculator && specificCalculator) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setSelectedItem(specificCalculator);
     } else if (location.state?.selectedObligationId) {
       // If coming from search results, auto-select the specified obligation
