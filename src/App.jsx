@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import CategoryPage from './pages/CategoryPage';
 import ResourcePage from './pages/ResourcePage';
+import DetailPage from './pages/DetailPage';
 import CNAESearch from './pages/CNAESearch';
 import SearchResults from './pages/SearchResults';
 import AIAssistant from './pages/AIAssistant';
@@ -28,12 +29,29 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search" element={<SearchResults />} />
+
+        {/* Individual obligation routes (must come before category index routes) */}
+        <Route path="/obrigacoes/nacionais/:id" element={<DetailPage />} />
+        <Route path="/obrigacoes/estaduais/:id" element={<DetailPage />} />
+        <Route path="/obrigacoes/municipais/:id" element={<DetailPage />} />
+        <Route path="/obrigacoes/trabalhistas/:id" element={<DetailPage />} />
+
+        {/* Category index routes */}
         <Route path="/obrigacoes/nacionais" element={<CategoryPage />} />
         <Route path="/obrigacoes/estaduais" element={<CategoryPage />} />
         <Route path="/obrigacoes/municipais" element={<CategoryPage />} />
         <Route path="/obrigacoes/trabalhistas" element={<CategoryPage />} />
-        <Route path="/impostos" element={<CategoryPage />} />
+
+        {/* Impostos resources (more specific routes first) */}
         <Route path="/impostos/:type/:id" element={<ResourcePage />} />
+
+        {/* Individual imposto routes */}
+        <Route path="/impostos/:id" element={<DetailPage />} />
+
+        {/* Impostos category index */}
+        <Route path="/impostos" element={<CategoryPage />} />
+
+        {/* Calculators */}
         <Route path="/calculadoras" element={<CategoryPage />} />
         <Route path="/calculadora-inss" element={<CategoryPage />} />
         <Route path="/calculadora-irrf" element={<CategoryPage />} />
@@ -41,6 +59,8 @@ function AppContent() {
         <Route path="/calculadora-multa" element={<CategoryPage />} />
         <Route path="/calculadora-juros" element={<CategoryPage />} />
         <Route path="/calculadora-dimob" element={<CategoryPage />} />
+
+        {/* Other pages */}
         <Route path="/cnae" element={<CNAESearch />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
