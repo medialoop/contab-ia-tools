@@ -10,6 +10,7 @@ import {
   SparklesIcon,
   MagnifyingGlassIcon,
   TagIcon,
+  BanknotesIcon,
 } from '@heroicons/react/24/outline';
 import { categories } from '../data/obligations';
 
@@ -18,6 +19,7 @@ const categoryIcons = {
   estaduais: MapIcon,
   municipais: BuildingOfficeIcon,
   trabalhistas: UsersIcon,
+  impostos: BanknotesIcon,
   calculadoras: CalculatorIcon,
   cnae: TagIcon,
 };
@@ -36,11 +38,17 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Assistente Contábil - Obrigações e Calculadoras</title>
+        <title>Assistente Contábil Online - Obrigações Fiscais, Impostos e Calculadoras | PraContador</title>
         <meta
           name="description"
-          content="Consulte informações sobre obrigações contábeis nacionais, estaduais, municipais e trabalhistas. Use calculadoras tributárias e converse com nosso assistente."
+          content="Assistente contábil inteligente com informações completas sobre obrigações fiscais (DCTF, ECF, eSocial), impostos brasileiros (IRPJ, CSLL, PIS, COFINS, ICMS, ISS), Reforma Tributária e calculadoras tributárias gratuitas. Tire suas dúvidas sobre contabilidade."
         />
+        <meta name="keywords" content="assistente contábil, obrigações fiscais, declarações tributárias, DCTF, ECF, eSocial, IRPJ, CSLL, PIS, COFINS, ICMS, ISS, reforma tributária, IBS, CBS, calculadoras tributárias, INSS, IRRF, Simples Nacional, contabilidade" />
+        <meta property="og:title" content="Assistente Contábil Online - Obrigações Fiscais e Impostos" />
+        <meta property="og:description" content="Consulte informações sobre obrigações contábeis, impostos brasileiros, Reforma Tributária e use calculadoras gratuitas. Assistente virtual para contadores e empresários." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pracontador.com.br/" />
+        <link rel="canonical" href="https://pracontador.com.br/" />
       </Helmet>
 
       <div className="flex-1 overflow-y-auto">

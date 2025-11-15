@@ -58,17 +58,22 @@ export default function CategoryPage() {
       <Helmet>
         <title>
           {isSpecificCalculator && specificCalculator
-            ? `${specificCalculator.name} - Assistente Contábil`
-            : `${categoryInfo?.name || 'Categoria'} - Assistente Contábil`}
+            ? `${specificCalculator.name} - Assistente Contábil | PraContador`
+            : `${categoryInfo?.name || 'Categoria'} - Assistente Contábil | PraContador`}
         </title>
         <meta
           name="description"
           content={
             isSpecificCalculator && specificCalculator
-              ? `${specificCalculator.description} - Ferramenta online gratuita`
-              : `Consulte informações sobre obrigações ${categoryInfo?.name.toLowerCase() || 'contábeis'} e tire suas dúvidas com nosso assistente.`
+              ? `${specificCalculator.description} - Ferramenta online gratuita para contadores e empresários`
+              : categoryInfo?.description || `Consulte informações sobre obrigações ${categoryInfo?.name.toLowerCase() || 'contábeis'} e tire suas dúvidas com nosso assistente inteligente.`
           }
         />
+        <meta name="keywords" content={`${categoryInfo?.name || 'contabilidade'}, obrigações fiscais, declarações, impostos, assistente contábil, ${category}, pracontador`} />
+        <meta property="og:title" content={isSpecificCalculator && specificCalculator ? `${specificCalculator.name} - Assistente Contábil` : `${categoryInfo?.name || 'Categoria'} - Assistente Contábil`} />
+        <meta property="og:description" content={isSpecificCalculator && specificCalculator ? specificCalculator.description : categoryInfo?.description || `Informações sobre ${categoryInfo?.name.toLowerCase() || 'obrigações contábeis'}`} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href={`https://pracontador.com.br${location.pathname}`} />
       </Helmet>
 
       <div className="flex-1 overflow-hidden bg-gray-100 p-4 md:p-6">
@@ -81,9 +86,9 @@ export default function CategoryPage() {
                   {categoryInfo?.name || 'Categoria'}
                 </h1>
                 <p className="text-sm md:text-base text-gray-600">
-                  {category === 'calculadoras'
+                  {categoryInfo?.description || (category === 'calculadoras'
                     ? 'Ferramentas para cálculos contábeis e tributários'
-                    : 'Selecione uma obrigação para ver detalhes e conversar com o assistente'}
+                    : 'Selecione uma obrigação para ver detalhes e conversar com o assistente')}
                 </p>
               </div>
 
