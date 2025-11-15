@@ -80,12 +80,15 @@ export default function SearchResults() {
     <>
       <Helmet>
         <title>
-          {query ? `Busca: ${query} - Assistente Contábil` : 'Buscar - Assistente Contábil'}
+          {query ? `Busca: ${query} - Assistente Contábil | PraContador` : 'Buscar Obrigações e Impostos - Assistente Contábil | PraContador'}
         </title>
         <meta
           name="description"
-          content={`Resultados da busca por: ${query}`}
+          content={query ? `Resultados da busca por "${query}" em obrigações fiscais, impostos e calculadoras tributárias.` : 'Busque informações sobre obrigações fiscais, declarações tributárias, impostos e calculadoras contábeis.'}
         />
+        <meta name="keywords" content={`busca contábil, ${query}, obrigações fiscais, impostos, declarações tributárias, assistente contábil`} />
+        <meta property="og:title" content={query ? `Busca: ${query}` : 'Buscar Obrigações e Impostos'} />
+        <link rel="canonical" href={`https://pracontador.com.br/search${query ? `?q=${encodeURIComponent(query)}` : ''}`} />
       </Helmet>
 
       <div className="flex-1 overflow-y-auto bg-gray-50">

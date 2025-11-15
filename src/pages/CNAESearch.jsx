@@ -75,11 +75,16 @@ export default function CNAESearch() {
   return (
     <>
       <Helmet>
-        <title>Busca CNAE - Assistente Contábil</title>
+        <title>Consulta CNAE - Busca de Códigos de Atividades Econômicas | PraContador</title>
         <meta
           name="description"
-          content="Pesquise códigos CNAE (Classificação Nacional de Atividades Econômicas) com dados oficiais do IBGE."
+          content="Pesquise códigos CNAE (Classificação Nacional de Atividades Econômicas) com dados oficiais do IBGE. Consulte descrições detalhadas, observações e encontre o CNAE correto para sua atividade empresarial."
         />
+        <meta name="keywords" content="CNAE, classificação nacional de atividades econômicas, código CNAE, busca CNAE, IBGE, atividades econômicas, consulta CNAE, tabela CNAE, código de atividade" />
+        <meta property="og:title" content="Consulta CNAE - Busca de Códigos de Atividades Econômicas" />
+        <meta property="og:description" content="Pesquise códigos CNAE com dados oficiais do IBGE. Encontre a classificação correta para sua atividade empresarial." />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://pracontador.com.br/cnae" />
       </Helmet>
 
       <div className="flex-1 overflow-y-auto bg-gray-100">

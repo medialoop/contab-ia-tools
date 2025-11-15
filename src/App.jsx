@@ -20,6 +20,7 @@ function App() {
             <Route path="/obrigacoes/estaduais" element={<CategoryPage />} />
             <Route path="/obrigacoes/municipais" element={<CategoryPage />} />
             <Route path="/obrigacoes/trabalhistas" element={<CategoryPage />} />
+            <Route path="/impostos" element={<CategoryPage />} />
             <Route path="/calculadoras" element={<CategoryPage />} />
             <Route path="/calculadora-inss" element={<CategoryPage />} />
             <Route path="/calculadora-irrf" element={<CategoryPage />} />

@@ -934,6 +934,430 @@ export const obligationsData = {
       }
     }
   ],
+  impostos: [
+    {
+      id: 'irpj',
+      name: 'IRPJ',
+      description: 'Imposto de Renda Pessoa Jurídica',
+      icon: 'BanknotesIcon',
+      content: {
+        title: 'IRPJ - Imposto de Renda Pessoa Jurídica',
+        summary: 'O IRPJ é o imposto federal incidente sobre o lucro das empresas. Pode ser calculado com base no Lucro Real, Lucro Presumido ou Lucro Arbitrado, dependendo do regime tributário da empresa.',
+        periodicity: 'Trimestral ou Anual (conforme opção)',
+        legalBasis: 'Lei nº 9.249/1995 e Decreto nº 9.580/2018 (RIR/2018)',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/tributos/irpj',
+        details: [
+          'Alíquota padrão de 15% sobre o lucro, com adicional de 10% sobre a parcela que exceder R$ 20.000,00 por mês',
+          'Três regimes de apuração: Lucro Real (obrigatório para grandes empresas), Lucro Presumido (simplificado) e Lucro Arbitrado (excepcional)',
+          'Lucro Real: apuração sobre o lucro contábil ajustado, trimestral ou anual com antecipações mensais',
+          'Lucro Presumido: presunção de lucro conforme percentual sobre a receita bruta (varia de 1,6% a 32% conforme atividade)',
+          'Simples Nacional possui regras próprias de tributação do IRPJ',
+          'Deduções permitidas: despesas operacionais, depreciação, provisões, incentivos fiscais',
+          'Empresas com faturamento superior a R$ 78 milhões ou determinadas atividades são obrigadas ao Lucro Real'
+        ],
+        faqs: [
+          {
+            question: 'Qual a diferença entre Lucro Real e Lucro Presumido?',
+            answer: 'No Lucro Real, o imposto incide sobre o lucro efetivo da empresa após ajustes fiscais. No Lucro Presumido, presume-se um percentual de lucro sobre a receita bruta, simplificando a apuração. O Lucro Real é obrigatório para empresas com faturamento acima de R$ 78 milhões/ano ou determinadas atividades.'
+          },
+          {
+            question: 'Como é calculado o IRPJ?',
+            answer: 'No Lucro Presumido, aplica-se um percentual sobre a receita (ex: 8% para comércio, 32% para serviços), resultando na base de cálculo. Sobre essa base, aplica-se 15%, mais adicional de 10% sobre o que exceder R$ 20.000/mês. No Lucro Real, calcula-se sobre o lucro contábil ajustado.'
+          },
+          {
+            question: 'Quando devo optar pelo Lucro Real?',
+            answer: 'É obrigatório para empresas com receita superior a R$ 78 milhões/ano, instituições financeiras, factoring, e empresas com lucros no exterior. Pode ser vantajoso quando a empresa tem prejuízo ou margem de lucro menor que a presumida, ou quando há muitos créditos fiscais.'
+          },
+          {
+            question: 'Qual o prazo de pagamento?',
+            answer: 'No regime trimestral, até o último dia útil do mês seguinte ao trimestre. No regime anual (Lucro Real), recolhimentos mensais estimados até o último dia útil do mês seguinte, com ajuste anual.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'csll',
+      name: 'CSLL',
+      description: 'Contribuição Social sobre o Lucro Líquido',
+      icon: 'CalculatorIcon',
+      content: {
+        title: 'CSLL - Contribuição Social sobre o Lucro Líquido',
+        summary: 'A CSLL é uma contribuição federal que incide sobre o lucro líquido das empresas, destinada ao financiamento da seguridade social. Segue as mesmas regras de apuração do IRPJ.',
+        periodicity: 'Trimestral ou Anual (conforme opção do IRPJ)',
+        legalBasis: 'Lei nº 7.689/1988 e alterações',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/tributos/csll',
+        details: [
+          'Alíquota de 9% para a maioria das empresas (comércio, indústria, serviços)',
+          'Alíquota de 15% para instituições financeiras e equiparadas (bancos, seguradoras, factoring)',
+          'Base de cálculo similar ao IRPJ, seguindo o mesmo regime (Lucro Real, Presumido ou Arbitrado)',
+          'No Lucro Presumido, aplica-se 12% da receita bruta para a maioria das atividades e 32% para serviços',
+          'Permite dedução de despesas operacionais, depreciação e provisões (no Lucro Real)',
+          'Não há adicional como no IRPJ, a alíquota é única',
+          'Empresas do Simples Nacional têm CSLL incluída no DAS'
+        ],
+        faqs: [
+          {
+            question: 'Qual a diferença entre CSLL e IRPJ?',
+            answer: 'Ambos incidem sobre o lucro, mas são tributos distintos. O IRPJ é um imposto federal (15% + adicional de 10%), enquanto a CSLL é uma contribuição social (9% ou 15% conforme atividade). A CSLL tem destinação específica para a seguridade social.'
+          },
+          {
+            question: 'Como calcular a CSLL no Lucro Presumido?',
+            answer: 'Aplica-se o percentual de presunção sobre a receita bruta (12% para comércio/indústria, 32% para serviços) para obter a base de cálculo. Sobre essa base, aplica-se a alíquota de 9% (ou 15% para instituições financeiras).'
+          },
+          {
+            question: 'A CSLL pode ser deduzida do IRPJ?',
+            answer: 'Sim, no regime de Lucro Real, a CSLL apurada pode ser deduzida da base de cálculo do IRPJ, pois é considerada despesa dedutível.'
+          },
+          {
+            question: 'Empresas com prejuízo pagam CSLL?',
+            answer: 'No Lucro Real, se houver prejuízo fiscal, não há CSLL a pagar. No Lucro Presumido, mesmo com prejuízo contábil, a CSLL é calculada sobre a receita bruta presumida.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'pis',
+      name: 'PIS',
+      description: 'Programa de Integração Social',
+      icon: 'UsersIcon',
+      content: {
+        title: 'PIS - Programa de Integração Social',
+        summary: 'O PIS é uma contribuição federal que incide sobre a receita bruta das empresas, destinada ao financiamento do seguro-desemprego e do abono salarial. Pode ser calculado no regime cumulativo ou não-cumulativo.',
+        periodicity: 'Mensal - até o 25º dia do mês subsequente',
+        legalBasis: 'Leis nº 10.637/2002 e 10.833/2003',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/tributos/pis-pasep',
+        details: [
+          'Regime Cumulativo: alíquota de 0,65% sobre a receita bruta (Lucro Presumido, Arbitrado)',
+          'Regime Não-Cumulativo: alíquota de 1,65% sobre a receita bruta com direito a créditos (Lucro Real)',
+          'No regime não-cumulativo, podem ser aproveitados créditos sobre aquisições, insumos, energia, aluguéis, entre outros',
+          'Simples Nacional: alíquotas progressivas conforme faixa de receita, incluídas no DAS',
+          'Algumas receitas possuem alíquotas diferenciadas ou são isentas (exportações, alguns produtos da cesta básica)',
+          'A apuração é feita mensalmente através da EFD-Contribuições',
+          'Receitas financeiras têm alíquotas específicas (0,65% no cumulativo e 4% no não-cumulativo)'
+        ],
+        faqs: [
+          {
+            question: 'Qual a diferença entre PIS Cumulativo e Não-Cumulativo?',
+            answer: 'No regime cumulativo (0,65%), não há direito a créditos, o imposto incide em cascata. No não-cumulativo (1,65%), há direito a créditos sobre compras e despesas permitidas, evitando a cumulatividade. Empresas no Lucro Real usam o não-cumulativo; no Lucro Presumido, o cumulativo.'
+          },
+          {
+            question: 'Quais créditos posso tomar no PIS Não-Cumulativo?',
+            answer: 'Principais créditos: aquisição de bens para revenda, insumos utilizados na produção, energia elétrica, aluguéis, armazenagem, frete, máquinas e equipamentos (depreciação), entre outros. Cada crédito possui regras específicas de aproveitamento.'
+          },
+          {
+            question: 'Como funciona o PIS no Simples Nacional?',
+            answer: 'No Simples Nacional, o PIS está incluído no DAS (Documento de Arrecadação do Simples). A alíquota varia conforme a faixa de receita e atividade, sendo calculada de forma progressiva. Não há direito a créditos.'
+          },
+          {
+            question: 'Exportações pagam PIS?',
+            answer: 'Não, as receitas de exportação são isentas de PIS/PASEP. Além disso, no regime não-cumulativo, é possível apropriar créditos sobre insumos utilizados na produção de bens exportados.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'cofins',
+      name: 'COFINS',
+      description: 'Contribuição para o Financiamento da Seguridade Social',
+      icon: 'HeartIcon',
+      content: {
+        title: 'COFINS - Contribuição para o Financiamento da Seguridade Social',
+        summary: 'A COFINS é uma contribuição federal que incide sobre a receita bruta das empresas, destinada ao financiamento da seguridade social (saúde, previdência e assistência social). Opera de forma similar ao PIS, com regimes cumulativo e não-cumulativo.',
+        periodicity: 'Mensal - até o 25º dia do mês subsequente',
+        legalBasis: 'Leis nº 10.637/2002 e 10.833/2003',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/tributos/cofins',
+        details: [
+          'Regime Cumulativo: alíquota de 3% sobre a receita bruta (Lucro Presumido, Arbitrado)',
+          'Regime Não-Cumulativo: alíquota de 7,6% sobre a receita bruta com direito a créditos (Lucro Real)',
+          'Os créditos seguem as mesmas regras do PIS, podendo ser compensados com débitos de COFINS',
+          'Simples Nacional: alíquotas progressivas incluídas no DAS',
+          'Receitas de exportação são isentas de COFINS',
+          'Algumas operações têm alíquotas reduzidas ou são isentas (produtos da cesta básica, medicamentos específicos)',
+          'Declarada mensalmente através da EFD-Contribuições junto com o PIS'
+        ],
+        faqs: [
+          {
+            question: 'Qual a relação entre COFINS e PIS?',
+            answer: 'São contribuições irmãs, com a mesma lógica de apuração. A COFINS tem alíquotas maiores (3% cumulativo, 7,6% não-cumulativo) contra 0,65% e 1,65% do PIS. Ambas incidem sobre receita bruta e seguem o mesmo regime (cumulativo ou não-cumulativo).'
+          },
+          {
+            question: 'Como funciona o crédito de COFINS?',
+            answer: 'No regime não-cumulativo, a empresa pode descontar créditos sobre aquisições e despesas permitidas (insumos, energia, aluguéis, etc). O crédito é calculado aplicando-se 7,6% sobre o valor da despesa. Esses créditos reduzem o valor a pagar de COFINS.'
+          },
+          {
+            question: 'Instituições financeiras pagam COFINS diferente?',
+            answer: 'Sim, instituições financeiras, seguradoras e similares têm regime específico. Não se aplica o regime não-cumulativo tradicional. As alíquotas e bases de cálculo são diferenciadas, conforme a legislação específica do setor.'
+          },
+          {
+            question: 'Posso compensar crédito de COFINS com PIS?',
+            answer: 'Não diretamente. Créditos de COFINS só podem ser compensados com débitos de COFINS. O mesmo vale para o PIS. Porém, ambos podem entrar no sistema de compensação tributária da Receita Federal (PER/DCOMP) para compensar com outros tributos federais.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'ipi',
+      name: 'IPI',
+      description: 'Imposto sobre Produtos Industrializados',
+      icon: 'CogIcon',
+      content: {
+        title: 'IPI - Imposto sobre Produtos Industrializados',
+        summary: 'O IPI é um imposto federal que incide sobre produtos industrializados, sejam nacionais ou importados. É um imposto seletivo (varia por produto) e não-cumulativo (permite créditos). Segue o princípio da essencialidade.',
+        periodicity: 'Mensal - apuração decendial ou mensal conforme regime',
+        legalBasis: 'Decreto nº 7.212/2010 (RIPI/2010)',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/tributos/ipi',
+        details: [
+          'Alíquotas variam de 0% a mais de 300%, conforme a TIPI (Tabela de Incidência do IPI)',
+          'Produtos essenciais têm alíquota zero ou reduzida; produtos supérfluos têm alíquotas elevadas',
+          'É não-cumulativo: o IPI pago nas compras de matéria-prima/insumos gera crédito',
+          'Fato gerador: saída do produto do estabelecimento industrial ou desembaraço aduaneiro',
+          'Apuração pode ser decendial (três vezes por mês) ou mensal, conforme o produto',
+          'Escrituração feita através da EFD-ICMS/IPI',
+          'Empresas do Simples Nacional podem ter substituição ou alíquota zero de IPI'
+        ],
+        faqs: [
+          {
+            question: 'Quem deve pagar IPI?',
+            answer: 'Estabelecimentos industriais (que realizam industrialização de produtos), importadores de produtos industrializados, e estabelecimentos equiparados a industrial (como atacadistas que vendem produtos tributados). Comércio varejista geralmente não paga IPI.'
+          },
+          {
+            question: 'Como funciona o crédito de IPI?',
+            answer: 'Ao adquirir matéria-prima ou insumos com IPI, a indústria pode se creditar desse valor. Na saída do produto acabado, calcula-se o IPI devido e compensa com os créditos. A diferença é o valor a recolher (ou saldo credor a ser aproveitado).'
+          },
+          {
+            question: 'Qual a alíquota do IPI?',
+            answer: 'Varia conforme o produto, seguindo a TIPI (Tabela de Incidência). Produtos essenciais (medicamentos, alimentos básicos) têm alíquota zero. Produtos como cigarros e bebidas têm alíquotas elevadas. Consulte a TIPI para o NCM específico do produto.'
+          },
+          {
+            question: 'Simples Nacional paga IPI?',
+            answer: 'Depende da atividade e produto. Muitos produtos têm alíquota zero de IPI para o Simples. Produtos sujeitos à tributação concentrada (ex: cigarros, bebidas) podem ter substituição tributária. Verifique a legislação específica para seu produto.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'icms',
+      name: 'ICMS',
+      description: 'Imposto sobre Circulação de Mercadorias e Serviços',
+      icon: 'TruckIcon',
+      content: {
+        title: 'ICMS - Imposto sobre Circulação de Mercadorias e Serviços',
+        summary: 'O ICMS é um imposto estadual que incide sobre a circulação de mercadorias e prestação de serviços de transporte interestadual/intermunicipal e comunicação. É o principal tributo dos estados e possui legislação específica em cada unidade federativa.',
+        periodicity: 'Mensal - conforme legislação estadual',
+        legalBasis: 'Lei Complementar nº 87/1996 (Lei Kandir) e legislação estadual',
+        reference: 'Consulte a Secretaria da Fazenda do seu estado',
+        details: [
+          'Alíquotas variam por estado: geralmente 17% ou 18% nas operações internas, podendo chegar a 20% ou 25% em alguns estados',
+          'Operações interestaduais: alíquotas de 4%, 7% ou 12% conforme origem/destino',
+          'É não-cumulativo: o ICMS pago nas compras gera crédito fiscal',
+          'Substituição Tributária (ICMS-ST): responsabilidade de recolhimento transferida a um contribuinte da cadeia',
+          'Diferencial de Alíquota (DIFAL): diferença entre alíquota interna e interestadual em operações para consumidor final',
+          'Cada estado tem sua legislação, benefícios fiscais e prazos específicos',
+          'Declaração via EFD-ICMS/IPI (SPED Fiscal), com prazos variando por estado'
+        ],
+        faqs: [
+          {
+            question: 'Qual a diferença entre ICMS normal e ICMS-ST?',
+            answer: 'No ICMS normal, cada contribuinte recolhe seu imposto. Na Substituição Tributária (ST), um contribuinte da cadeia (geralmente fabricante/importador) recolhe antecipadamente o ICMS de toda a cadeia, até o consumidor final, facilitando a fiscalização.'
+          },
+          {
+            question: 'Como funciona o DIFAL?',
+            answer: 'O DIFAL é a diferença entre a alíquota interna do estado de destino e a alíquota interestadual. É devido em vendas para consumidor final não contribuinte em outro estado. Parte vai para o estado de origem e parte para o de destino (EC 87/2015).'
+          },
+          {
+            question: 'Como calcular o crédito de ICMS?',
+            answer: 'O crédito corresponde ao ICMS destacado nas notas fiscais de compra de mercadorias para revenda ou insumos de produção. O crédito compensa com o débito (ICMS das vendas). A diferença é o valor a recolher ou saldo credor acumulado.'
+          },
+          {
+            question: 'Quais as alíquotas interestaduais?',
+            answer: 'Sul/Sudeste (exceto ES) para Norte/Nordeste/Centro-Oeste/ES: 7%. Sul/Sudeste entre si: 12%. Produtos importados: 4%. A partir de 2023, operações com não contribuinte seguem a alíquota interna do destino, com DIFAL partilhado.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'iss',
+      name: 'ISS',
+      description: 'Imposto sobre Serviços de Qualquer Natureza',
+      icon: 'WrenchScrewdriverIcon',
+      content: {
+        title: 'ISS - Imposto sobre Serviços',
+        summary: 'O ISS (ou ISSQN) é um imposto municipal que incide sobre a prestação de serviços. Cada município tem sua própria legislação, alíquotas e regras, dentro dos limites estabelecidos pela Lei Complementar 116/2003.',
+        periodicity: 'Mensal - conforme legislação municipal',
+        legalBasis: 'Lei Complementar nº 116/2003 e legislação municipal',
+        reference: 'Portal da prefeitura do município',
+        details: [
+          'Alíquotas variam de 2% a 5% conforme o município e tipo de serviço',
+          'Alíquota mínima nacional: 2% (exceto casos específicos de construção civil e alguns serviços)',
+          'Lista de serviços tributáveis definida na LC 116/2003 (atualizada)',
+          'Retenção na fonte: em muitos casos, o tomador do serviço deve reter e recolher o ISS',
+          'Simples Nacional: ISS incluído no DAS, mas com possibilidades de retenção e complementação',
+          'Local de recolhimento: geralmente no município do prestador, mas há exceções (construção civil, eventos, etc.)',
+          'NFS-e (Nota Fiscal de Serviços Eletrônica) é obrigatória na maioria dos municípios'
+        ],
+        faqs: [
+          {
+            question: 'Qual a alíquota do ISS?',
+            answer: 'Varia de 2% a 5% conforme o município e tipo de serviço. A Lei Complementar 116/2003 estabelece alíquota mínima de 2%. Consulte a legislação específica do município onde o serviço é prestado ou onde está estabelecido.'
+          },
+          {
+            question: 'Onde devo recolher o ISS?',
+            answer: 'Regra geral: município onde está estabelecido o prestador. Exceções: construção civil (local da obra), eventos (local do evento), instalação de equipamentos (local da instalação). Verifique a LC 116/2003 e legislação municipal.'
+          },
+          {
+            question: 'O que é retenção de ISS?',
+            answer: 'É quando o tomador do serviço (quem contrata) tem a responsabilidade de reter o ISS do valor do serviço e recolher diretamente à prefeitura. É comum em serviços prestados para empresas e órgãos públicos. O percentual retido varia por município.'
+          },
+          {
+            question: 'Como funciona ISS no Simples Nacional?',
+            answer: 'O ISS está incluído no DAS do Simples Nacional. Porém, pode haver retenção na fonte pelo tomador e, em alguns casos, alíquota mínima municipal superior à do Simples, exigindo complementação. Verifique a legislação municipal.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'inss-patronal',
+      name: 'INSS Patronal',
+      description: 'Contribuição Previdenciária Patronal',
+      icon: 'ShieldCheckIcon',
+      content: {
+        title: 'INSS Patronal - Contribuição Previdenciária da Empresa',
+        summary: 'A Contribuição Previdenciária Patronal é a contribuição que a empresa deve recolher sobre a folha de pagamento dos empregados, destinada ao financiamento da Previdência Social. É também conhecida como CPP (Contribuição Previdenciária Patronal).',
+        periodicity: 'Mensal - até o dia 20 do mês seguinte',
+        legalBasis: 'Lei nº 8.212/1991 e Decreto nº 3.048/1999',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/tributos/contribuicoes-previdenciarias',
+        details: [
+          'Alíquota padrão: 20% sobre o total da folha de pagamento (remuneração dos empregados)',
+          'Acrescido de percentuais para SAT/RAT (risco de acidente de trabalho): 1%, 2% ou 3% conforme grau de risco',
+          'Mais 5,8% para terceiros (Sistema S, INCRA, Salário-Educação) para empresas não optantes pelo Simples',
+          'Simples Nacional: alíquotas reduzidas incluídas no DAS (varia de 4% a 7,83% conforme faixa)',
+          'Desoneração da folha: algumas atividades podem recolher CPP sobre receita bruta (1,5% a 4,5%) ao invés de folha',
+          'Apuração via eSocial, com geração automática da DCTFWeb',
+          'Pró-labore de sócios também sofre incidência de 20%'
+        ],
+        faqs: [
+          {
+            question: 'Como calcular a contribuição patronal?',
+            answer: 'Regime geral: 20% sobre a folha de pagamento + SAT/RAT (1% a 3%) + terceiros (5,8% se aplicável). No Simples Nacional, alíquota reduzida conforme anexo e faixa de receita. Base de cálculo: total das remunerações pagas aos segurados empregados e contribuintes individuais.'
+          },
+          {
+            question: 'O que é SAT/RAT?',
+            answer: 'Seguro de Acidente de Trabalho / Risco Ambiental do Trabalho. É um adicional à contribuição previdenciária que varia de 1% (risco leve) a 3% (risco grave) conforme a atividade da empresa. Pode ter FAP (Fator Acidentário de Prevenção) aplicado, reduzindo ou aumentando a alíquota.'
+          },
+          {
+            question: 'Qual o prazo de recolhimento?',
+            answer: 'Até o dia 20 do mês seguinte ao da competência (mês trabalhado). Se o dia 20 cair em feriado ou fim de semana, prorroga-se para o próximo dia útil. O recolhimento é feito via DARF gerado pela DCTFWeb (vinculada ao eSocial).'
+          },
+          {
+            question: 'E no Simples Nacional?',
+            answer: 'Empresas do Simples têm alíquotas reduzidas de CPP incluídas no DAS (Anexo I a V, conforme atividade e faixa de receita). Porém, sobre o pró-labore e alguns contratos (serviços prestados a PJ), pode haver INSS separado a 20%.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'fgts',
+      name: 'FGTS',
+      description: 'Fundo de Garantia do Tempo de Serviço',
+      icon: 'BuildingLibraryIcon',
+      content: {
+        title: 'FGTS - Fundo de Garantia do Tempo de Serviço',
+        summary: 'O FGTS é um fundo criado para proteger o trabalhador demitido sem justa causa. O empregador deposita mensalmente 8% do salário do empregado em conta vinculada na Caixa Econômica Federal.',
+        periodicity: 'Mensal - até o dia 7 do mês seguinte',
+        legalBasis: 'Lei nº 8.036/1990',
+        reference: 'https://www.caixa.gov.br/empresa/fgts/',
+        details: [
+          'Alíquota padrão: 8% sobre a remuneração paga ou devida ao empregado',
+          'Aprendizes: 2% ao invés de 8%',
+          'Depositado em conta vinculada em nome do trabalhador na Caixa Econômica Federal',
+          'Vencimento: dia 7 do mês seguinte ao trabalhado (quando não é dia útil, antecipa)',
+          'Multa de 50% (empresa paga 40% ao trabalhador + 10% à União) sobre o saldo em caso de demissão sem justa causa',
+          'Declarado via eSocial (eventos S-1200 e S-1210), SEFIP ainda usado em casos específicos',
+          'Não depositado para autônomos, sócios e diretores sem vínculo empregatício (salvo exceções)'
+        ],
+        faqs: [
+          {
+            question: 'Como calcular o FGTS?',
+            answer: 'Multiplique 8% pelo valor total da remuneração mensal do empregado (salário + horas extras + comissões + gratificações + adicionais). Para aprendizes, o percentual é 2%. O 13º salário também tem incidência de FGTS, depositado junto com o pagamento.'
+          },
+          {
+            question: 'Qual o prazo de depósito?',
+            answer: 'Até o dia 7 do mês seguinte ao mês trabalhado. Se o dia 7 cair em sábado, domingo ou feriado, antecipa-se para o dia útil imediatamente anterior. Exemplo: FGTS de janeiro deve ser depositado até 07 de fevereiro.'
+          },
+          {
+            question: 'Quando o trabalhador pode sacar o FGTS?',
+            answer: 'Principais hipóteses: demissão sem justa causa, término de contrato por prazo determinado, aposentadoria, compra de imóvel, doenças graves, falecimento, permanência 3 anos sem depósito (saque parcial anual), calamidade pública. Consulte a Caixa para todas as hipóteses.'
+          },
+          {
+            question: 'MEI precisa recolher FGTS?',
+            answer: 'Se o MEI tiver empregado, sim. O MEI pode ter um empregado contratado e deve recolher FGTS normalmente (8% sobre o salário). Se não tiver empregados, não há FGTS a recolher.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'reforma-tributaria',
+      name: 'Reforma Tributária',
+      description: 'Nova estrutura tributária brasileira - IBS, CBS e Imposto Seletivo',
+      icon: 'SparklesIcon',
+      content: {
+        title: 'Reforma Tributária - A Nova Era dos Tributos no Brasil',
+        summary: 'A Reforma Tributária (EC 132/2023) representa a maior mudança no sistema tributário brasileiro em décadas. Simplifica a tributação sobre consumo, substituindo cinco tributos (ICMS, ISS, PIS, COFINS e IPI) por três novos: IBS (Imposto sobre Bens e Serviços), CBS (Contribuição sobre Bens e Serviços) e IS (Imposto Seletivo). A transição será gradual de 2026 a 2033.',
+        periodicity: 'Implementação gradual de 2026 a 2033',
+        legalBasis: 'Emenda Constitucional nº 132/2023 e Lei Complementar nº 214/2025',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/reforma-tributaria',
+        details: [
+          'SUBSTITUIÇÃO DE TRIBUTOS: IBS e CBS substituirão ICMS, ISS, PIS, COFINS e IPI',
+          'IBS - Imposto sobre Bens e Serviços: substitui ICMS e ISS, gerido por estados e municípios através do Comitê Gestor do IBS',
+          'CBS - Contribuição sobre Bens e Serviços: substitui PIS, COFINS e IPI, tributo federal',
+          'IS - Imposto Seletivo: tributo federal sobre produtos prejudiciais à saúde e meio ambiente (cigarros, bebidas alcoólicas, veículos, etc)',
+          'ALÍQUOTA PADRÃO ESTIMADA: 27,5% (IBS + CBS somados), podendo chegar a 28,5% - uma das maiores do mundo',
+          'MODELO IVA (Imposto sobre Valor Agregado): não-cumulativo pleno, com crédito integral na cadeia',
+          'CASHBACK: devolução de tributos para famílias de baixa renda via CPF na nota',
+          'SPLIT PAYMENT: recolhimento automático dos tributos no momento da transação, via sistema de pagamentos',
+          'Transição: 2026 (CBS e IBS a 0,9% e 0,1% - teste), 2027-2032 (alíquotas crescentes com extinção gradual dos tributos antigos), 2033 (100% novo sistema)',
+          'REGIMES ESPECÍFICOS: Simples Nacional mantido, mas adaptado. Regimes favorecidos para saúde, educação, transporte público, cultura',
+          'REDUÇÃO DE 60%: medicamentos, dispositivos médicos e de acessibilidade, produtos de higiene e cuidados menstruais',
+          'REDUÇÃO DE 30%: serviços de educação, serviços de saúde, produtos agropecuários, insumos agropecuários',
+          'ISENÇÃO: cesta básica nacional (itens definidos em lei), serviços de educação de ensino superior (PROUNI), produtos hortifrutigranjeiros in natura'
+        ],
+        faqs: [
+          {
+            question: 'O que muda com a Reforma Tributária?',
+            answer: 'A reforma substitui cinco tributos complexos (PIS, COFINS, IPI, ICMS, ISS) por três mais simples (CBS, IBS, IS). Adota o modelo IVA, com não-cumulatividade plena e crédito integral. Elimina a "guerra fiscal" entre estados. Simplifica drasticamente a apuração, mas aumenta a carga tributária média estimada para 27,5-28,5%.'
+          },
+          {
+            question: 'Quando entra em vigor?',
+            answer: 'Transição de 2026 a 2033. Em 2026-2027: período de testes (CBS e IBS com alíquotas reduzidas). 2027-2032: extinção gradual de PIS, COFINS, ICMS e ISS (redução de 1/6 ao ano), com aumento proporcional de CBS/IBS. 2033: sistema totalmente novo, tributos antigos extintos.'
+          },
+          {
+            question: 'O que é IBS e CBS?',
+            answer: 'IBS (Imposto sobre Bens e Serviços): tributo estadual/municipal que substitui ICMS e ISS, arrecadado no destino (onde o consumidor está). CBS (Contribuição sobre Bens e Serviços): tributo federal que substitui PIS, COFINS e IPI. Ambos seguem o modelo IVA com mesma base de cálculo e regras.'
+          },
+          {
+            question: 'Qual será a alíquota final?',
+            answer: 'Estimativa: 27,5% a 28,5% (IBS + CBS). A alíquota exata será definida após estudos atuariais para garantir neutralidade de receita. Setores terão alíquotas diferenciadas: redução de 60% (saúde), 30% (educação, alimentos), isenção (cesta básica). Imposto Seletivo adicional para produtos nocivos.'
+          },
+          {
+            question: 'O que é o Imposto Seletivo?',
+            answer: 'Tributo federal sobre produtos prejudiciais à saúde ou meio ambiente (princípio da seletividade e extrafiscalidade). Incidirá sobre: veículos, embarcações e aeronaves; cigarros e produtos fumígenos; bebidas alcoólicas; bebidas açucaradas; apostas; extração de minérios. Alíquotas ainda serão definidas.'
+          },
+          {
+            question: 'Como fica o Simples Nacional?',
+            answer: 'O Simples Nacional será mantido e adaptado ao novo sistema. Empresas continuarão pagando tributos de forma unificada, mas com CBS e IBS ao invés dos tributos antigos. Os anexos e faixas de tributação serão ajustados. Objetivo: preservar o tratamento diferenciado para micro e pequenas empresas.'
+          },
+          {
+            question: 'O que é Split Payment?',
+            answer: 'Sistema de recolhimento automático dos tributos no momento da transação de venda. Ao pagar uma compra, o sistema separa automaticamente o valor do imposto e transfere ao fisco, enquanto o restante vai ao vendedor. Reduz sonegação e elimina a necessidade de apuração mensal tradicional.'
+          },
+          {
+            question: 'Haverá aumento de impostos?',
+            answer: 'O governo afirma que a reforma é neutra em arrecadação (não aumenta nem diminui a carga total). Porém, haverá redistribuição: setores que pagam pouco hoje (serviços) podem pagar mais; setores com benefícios fiscais perderão vantagens. A alíquota padrão estimada de 27,5% é alta, mas compensa a ampla base de incidência.'
+          }
+        ]
+      }
+    }
+  ],
   calculadoras: [
     {
       id: 'calc-inss',
@@ -987,10 +1411,11 @@ export const obligationsData = {
 };
 
 export const categories = [
-  { id: 'nacionais', name: 'Obrigações Nacionais', path: '/obrigacoes/nacionais' },
-  { id: 'estaduais', name: 'Obrigações Estaduais', path: '/obrigacoes/estaduais' },
-  { id: 'municipais', name: 'Obrigações Municipais', path: '/obrigacoes/municipais' },
-  { id: 'trabalhistas', name: 'Obrigações Trabalhistas', path: '/obrigacoes/trabalhistas' },
-  { id: 'calculadoras', name: 'Calculadoras', path: '/calculadoras' },
-  { id: 'cnae', name: 'Consulta CNAE', path: '/cnae' },
+  { id: 'nacionais', name: 'Obrigações Nacionais', path: '/obrigacoes/nacionais', description: 'Declarações e obrigações acessórias federais: DCTF, ECF, ECD, EFD-Contribuições, DIRF, eSocial e mais' },
+  { id: 'estaduais', name: 'Obrigações Estaduais', path: '/obrigacoes/estaduais', description: 'Obrigações fiscais estaduais: EFD-ICMS/IPI, GIA, SINTEGRA, DeSTDA e GIA-ST' },
+  { id: 'municipais', name: 'Obrigações Municipais', path: '/obrigacoes/municipais', description: 'Declarações municipais: DIMOB, NFS-e, DES/DMISS/DIM e Livro Fiscal Eletrônico' },
+  { id: 'trabalhistas', name: 'Obrigações Trabalhistas', path: '/obrigacoes/trabalhistas', description: 'Obrigações relacionadas a empregados: RAIS, GFIP, CAGED e eSocial Trabalhista' },
+  { id: 'impostos', name: 'Impostos', path: '/impostos', description: 'Guia completo sobre impostos brasileiros: IRPJ, CSLL, PIS, COFINS, IPI, ICMS, ISS, INSS e Reforma Tributária' },
+  { id: 'calculadoras', name: 'Calculadoras', path: '/calculadoras', description: 'Ferramentas de cálculo: INSS, IRRF, Simples Nacional, Multas, Juros e DIMOB' },
+  { id: 'cnae', name: 'Consulta CNAE', path: '/cnae', description: 'Busque códigos CNAE e suas descrições na base de dados oficial do IBGE' },
 ];
