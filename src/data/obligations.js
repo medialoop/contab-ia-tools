@@ -1415,7 +1415,6 @@ export const categories = [
   { id: 'estaduais', name: 'Obrigações Estaduais', path: '/obrigacoes/estaduais', description: 'Obrigações fiscais estaduais: EFD-ICMS/IPI, GIA, SINTEGRA, DeSTDA e GIA-ST' },
   { id: 'municipais', name: 'Obrigações Municipais', path: '/obrigacoes/municipais', description: 'Declarações municipais: DIMOB, NFS-e, DES/DMISS/DIM e Livro Fiscal Eletrônico' },
   { id: 'trabalhistas', name: 'Obrigações Trabalhistas', path: '/obrigacoes/trabalhistas', description: 'Obrigações relacionadas a empregados: RAIS, GFIP, CAGED e eSocial Trabalhista' },
-  { id: 'impostos', name: 'Impostos', path: '/impostos', description: 'Guia completo sobre impostos brasileiros: IRPJ, CSLL, PIS, COFINS, IPI, ICMS, ISS, INSS e Reforma Tributária' },
   { id: 'calculadoras', name: 'Calculadoras', path: '/calculadoras', description: 'Ferramentas de cálculo: INSS, IRRF, Simples Nacional, Multas, Juros e DIMOB' },
   { id: 'cnae', name: 'Consulta CNAE', path: '/cnae', description: 'Busque códigos CNAE e suas descrições na base de dados oficial do IBGE' },
 ];

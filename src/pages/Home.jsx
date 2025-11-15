@@ -11,6 +11,7 @@ import {
   MagnifyingGlassIcon,
   TagIcon,
   BanknotesIcon,
+  ArrowDownTrayIcon,
 } from '@heroicons/react/24/outline';
 import { categories } from '../data/obligations';
 
@@ -141,6 +142,39 @@ export default function Home() {
                 </Link>
               );
             })}
+          </div>
+        </div>
+
+        {/* Conteudos e Download Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Conteúdos e Download
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-4">
+              Acesse guias completos e materiais de referência para consulta.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link
+              to="/impostos"
+              className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-200 p-6 border-2 border-transparent hover:border-primary-500"
+            >
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 p-3 bg-primary-100 rounded-lg group-hover:bg-primary-500 transition-colors duration-200">
+                  <BanknotesIcon className="w-8 h-8 text-primary-600 group-hover:text-white transition-colors duration-200" />
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors duration-200">
+                    Impostos
+                  </h3>
+                  <p className="text-gray-600">
+                    Guia completo sobre impostos brasileiros: IRPJ, CSLL, PIS, COFINS, IPI, ICMS, ISS, INSS e Reforma Tributária
+                  </p>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
 
