@@ -15,12 +15,7 @@ function AppContent() {
   const isAIAssistant = location.pathname === '/assistente-ia' || location.pathname === '/ia';
 
   if (isAIAssistant) {
-    return (
-      <Routes>
-        <Route path="/assistente-ia" element={<AIAssistant />} />
-        <Route path="/ia" element={<AIAssistant />} />
-      </Routes>
-    );
+    return <AIAssistant />;
   }
 
   return (
