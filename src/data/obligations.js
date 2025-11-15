@@ -1296,6 +1296,333 @@ export const obligationsData = {
       }
     },
     {
+      id: 'iof',
+      name: 'IOF',
+      description: 'Imposto sobre Operações Financeiras',
+      icon: 'BanknotesIcon',
+      content: {
+        title: 'IOF - Imposto sobre Operações Financeiras',
+        summary: 'O IOF é um imposto federal que incide sobre operações de crédito, câmbio, seguro e títulos/valores mobiliários. Tem caráter regulatório, sendo usado pelo governo para controlar o crédito e a economia.',
+        periodicity: 'Recolhimento automático na operação',
+        legalBasis: 'Lei nº 5.143/1966, Lei nº 8.894/1994 e Decreto nº 6.306/2007 (RIOF)',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/tributos/iof',
+        details: [
+          'IOF-Crédito: até 0,0041% ao dia + 0,38% sobre o valor total, limitado ao rendimento (empréstimos, financiamentos)',
+          'IOF-Câmbio: até 0,38% para transferências internacionais e remessas; 6,38% para compra de moeda estrangeira em espécie',
+          'IOF-Seguro: 0,38% a 7,38% sobre o prêmio de seguros (varia conforme tipo)',
+          'IOF-Títulos: alíquota regressiva para aplicações de renda fixa (quanto menor o prazo, maior o IOF), zero após 30 dias',
+          'Operações com cartão de crédito internacional: 5,38% (4,38% + 1% adicional)',
+          'Isento em algumas operações: financiamento habitacional SFH, crédito rural, algumas exportações',
+          'Recolhido automaticamente pela instituição financeira no momento da operação'
+        ],
+        faqs: [
+          {
+            question: 'Quando pago IOF?',
+            answer: 'O IOF é recolhido automaticamente pela instituição financeira no momento da operação. Exemplos: ao fazer empréstimo (IOF sobre crédito), ao comprar dólar (IOF câmbio), ao resgatar investimento com menos de 30 dias (IOF sobre títulos), ao usar cartão no exterior (IOF 6,38%).'
+          },
+          {
+            question: 'Qual a alíquota do IOF?',
+            answer: 'Varia conforme a operação: Crédito: 0,0041% ao dia + 0,38% adicional. Câmbio: 0,38% (transferências) a 6,38% (espécie). Cartão internacional: 5,38%. Títulos: regressivo de 96% a 0% (zero após 30 dias). Seguros: 0,38% a 7,38%.'
+          },
+          {
+            question: 'Como funciona IOF em investimentos?',
+            answer: 'Em aplicações de renda fixa (CDB, LCI, Tesouro), o IOF incide se o resgate for feito em menos de 30 dias. A alíquota é regressiva: 96% no 1º dia, reduzindo 3,33% ao dia, chegando a 0% no 30º dia. Após 30 dias, não há IOF. IOF não se aplica a ações, fundos de ações e poupança.'
+          },
+          {
+            question: 'Tem IOF em compras internacionais?',
+            answer: 'Sim. Compras com cartão no exterior ou em sites internacionais têm IOF de 5,38% sobre o valor em reais. Compra de moeda estrangeira em espécie: 1,1%. Transferências internacionais (remessas): 0,38%. PayPal e carteiras digitais internacionais também sofrem IOF.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'itr',
+      name: 'ITR',
+      description: 'Imposto sobre a Propriedade Territorial Rural',
+      icon: 'HomeModernIcon',
+      content: {
+        title: 'ITR - Imposto Territorial Rural',
+        summary: 'O ITR é um imposto federal que incide sobre a propriedade de imóveis rurais. Tem função extrafiscal, estimulando a produtividade da terra através de alíquotas menores para propriedades produtivas.',
+        periodicity: 'Anual - declaração até último dia útil de setembro',
+        legalBasis: 'Lei nº 9.393/1996 e Instrução Normativa RFB nº 1.877/2019',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/tributos/itr',
+        details: [
+          'Alíquotas de 0,03% a 20% conforme área total e grau de utilização (GU)',
+          'Quanto maior a área e menor a utilização, maior a alíquota (função de desestímulo à terra improdutiva)',
+          'Grau de Utilização (GU): percentual de área efetivamente utilizada para produção',
+          'Imunidades: pequenas glebas rurais (até 30, 50 ou 100 hectares conforme região), áreas de preservação permanente',
+          'Declaração via DITR (Declaração do ITR) até o último dia útil de setembro',
+          'Receita pode ser destinada ao município onde se localiza o imóvel (convênio)',
+          'Pagamento em até 4 quotas (mínimo R$ 50,00 por quota)'
+        ],
+        faqs: [
+          {
+            question: 'Como é calculado o ITR?',
+            answer: 'Base de cálculo: Valor da Terra Nua (VTN) menos áreas de preservação, interesse ecológico e servidão. A alíquota varia de 0,03% a 20% conforme tabela progressiva que considera área total e Grau de Utilização (GU). Propriedades pequenas e produtivas pagam menos; grandes e improdutivas pagam mais.'
+          },
+          {
+            question: 'Quem está isento de ITR?',
+            answer: 'Pequenas glebas rurais: até 30 hectares (Norte/Nordeste e Polígono das Secas), 50 ha (Centro-Oeste) ou 100 ha (Sul/Sudeste), desde que o proprietário não tenha outro imóvel. Também são isentas comunidades quilombolas, terras indígenas e áreas de preservação permanente.'
+          },
+          {
+            question: 'Qual o prazo para declarar?',
+            answer: 'A DITR (Declaração do ITR) deve ser entregue até o último dia útil de setembro de cada ano. O pagamento pode ser feito em cota única (com desconto) até essa data, ou em até 4 quotas mensais (setembro a dezembro), desde que cada quota seja no mínimo R$ 50,00.'
+          },
+          {
+            question: 'O que é Grau de Utilização?',
+            answer: 'GU é o percentual da área aproveitável que está sendo efetivamente utilizada com produção agropecuária. Exemplo: propriedade de 1.000 ha com 800 ha aproveitáveis e 600 ha produzindo = GU de 75%. Quanto maior o GU, menor a alíquota do ITR.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'ii',
+      name: 'II',
+      description: 'Imposto de Importação',
+      icon: 'GlobeAmericasIcon',
+      content: {
+        title: 'II - Imposto de Importação',
+        summary: 'O II é um imposto federal que incide sobre produtos estrangeiros que entram no país. Tem função regulatória, protegendo a indústria nacional e regulando o comércio exterior.',
+        periodicity: 'No desembaraço aduaneiro',
+        legalBasis: 'Decreto-Lei nº 37/1966 e Regulamento Aduaneiro (Decreto nº 6.759/2009)',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/aduana-e-comercio-exterior',
+        details: [
+          'Alíquotas variam conforme a TEC (Tarifa Externa Comum do Mercosul) e NCM do produto',
+          'Podem variar de 0% a 35%, com a maioria entre 10% e 20%',
+          'Base de cálculo: valor aduaneiro (CIF - custo + seguro + frete)',
+          'Pode ser alterado pelo Executivo sem necessidade de lei (instrumento de política econômica)',
+          'Isenções: bagagem de viajante (até US$ 1.000), remessas postais (até US$ 50), alguns insumos sem similar nacional',
+          'Regimes especiais: drawback, admissão temporária, entreposto aduaneiro (suspensão ou redução)',
+          'Declaração via Siscomex (Sistema Integrado de Comércio Exterior)',
+          'Fato gerador: desembaraço aduaneiro (liberação da mercadoria pela Receita Federal)'
+        ],
+        faqs: [
+          {
+            question: 'Como é calculado o Imposto de Importação?',
+            answer: 'Base de cálculo: valor aduaneiro (CIF) = custo da mercadoria + frete internacional + seguro internacional. Alíquota: conforme NCM (classificação fiscal) do produto na TEC (varia de 0% a 35%). Além do II, incidem IPI, PIS-Importação, COFINS-Importação e ICMS no desembaraço.'
+          },
+          {
+            question: 'Qual a alíquota do Imposto de Importação?',
+            answer: 'Varia conforme o produto (NCM). Matérias-primas e bens de capital: 0% a 14%. Bens de consumo: 16% a 35%. A TEC (Tarifa Externa Comum) do Mercosul define as alíquotas padrão. O governo pode aumentar ou reduzir temporariamente para fins de política econômica.'
+          },
+          {
+            question: 'Compras internacionais pagam imposto?',
+            answer: 'Sim. Compras em sites internacionais sofrem II + ICMS no desembaraço. Remessas até US$ 50 via Remessa Conforme têm imposto de 60% simplificado. Bagagem de viajante: isenção até US$ 1.000 (aéreo/marítimo) ou US$ 500 (terrestre/fluvial). Valores superiores pagam II + outros tributos.'
+          },
+          {
+            question: 'O que é Drawback?',
+            answer: 'Regime aduaneiro especial que suspende ou elimina tributos (II, IPI, PIS, COFINS) na importação de insumos destinados à produção de bens para exportação. Objetivo: tornar produtos brasileiros competitivos no mercado externo, eliminando a carga tributária sobre insumos importados.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'ie',
+      name: 'IE',
+      description: 'Imposto de Exportação',
+      icon: 'ArrowUpTrayIcon',
+      content: {
+        title: 'IE - Imposto de Exportação',
+        summary: 'O IE é um imposto federal que pode incidir sobre produtos brasileiros destinados ao exterior. Na prática, é raramente utilizado, pois o Brasil incentiva exportações. Quando aplicado, tem função regulatória para evitar desabastecimento interno.',
+        periodicity: 'No desembaraço aduaneiro de exportação (quando aplicável)',
+        legalBasis: 'Decreto-Lei nº 1.578/1977 e Regulamento Aduaneiro (Decreto nº 6.759/2009)',
+        reference: 'https://www.gov.br/receitafederal/pt-br/assuntos/aduana-e-comercio-exterior',
+        details: [
+          'Alíquota máxima: 30% (pode ser alterada pelo Executivo)',
+          'Na prática, alíquota é 0% para a maioria dos produtos (política de incentivo à exportação)',
+          'Pode ser ativado pontualmente para produtos primários em situação de desabastecimento interno',
+          'Exemplos históricos: minério de ferro, produtos agrícolas em períodos de escassez',
+          'Base de cálculo: preço normal (valor da mercadoria no mercado internacional)',
+          'Isenção constitucional para produtos industrializados (regra geral)',
+          'Exportações são desoneradas de PIS, COFINS, IPI e ICMS (imunidade/isenção)',
+          'Pouquíssimas operações realmente pagam IE atualmente'
+        ],
+        faqs: [
+          {
+            question: 'Exportações pagam imposto no Brasil?',
+            answer: 'Regra geral: NÃO. Exportações são desoneradas (PIS, COFINS, IPI, ICMS isentos/imunes). O Imposto de Exportação (IE) existe legalmente, mas a alíquota é 0% para praticamente todos os produtos. Apenas em situações excepcionais (risco de desabastecimento) pode ser ativado para produtos primários.'
+          },
+          {
+            question: 'Quando incide o Imposto de Exportação?',
+            answer: 'Raramente. O IE pode ser aplicado em situações específicas para evitar desabastecimento interno de produtos essenciais (minérios, commodities agrícolas). O governo usa essa ferramenta pontualmente como instrumento de política econômica. Para a vasta maioria dos produtos, a alíquota é zero.'
+          },
+          {
+            question: 'Qual a alíquota do IE?',
+            answer: 'Legalmente pode chegar a 30%, mas na prática é 0% para quase todos os produtos. O governo brasileiro adota política de desoneração das exportações para estimular vendas externas. Apenas em casos muito específicos e temporários, produtos primários podem ter alíquota positiva.'
+          },
+          {
+            question: 'Quais tributos não incidem na exportação?',
+            answer: 'Exportações são isentas/imunes de: IPI, PIS, COFINS (isenção total), ICMS (imunidade constitucional), IE (alíquota zero). Além disso, no regime não-cumulativo, é possível manter créditos de PIS/COFINS sobre insumos usados em produtos exportados, gerando saldo credor.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'ipva',
+      name: 'IPVA',
+      description: 'Imposto sobre Propriedade de Veículos Automotores',
+      icon: 'TruckIcon',
+      content: {
+        title: 'IPVA - Imposto sobre a Propriedade de Veículos Automotores',
+        summary: 'O IPVA é um imposto estadual que incide sobre a propriedade de veículos automotores (carros, motos, caminhões, etc.). Cada estado define suas próprias alíquotas, benefícios fiscais e calendário de pagamento.',
+        periodicity: 'Anual - conforme calendário estadual',
+        legalBasis: 'Constituição Federal art. 155, III e legislação estadual',
+        reference: 'Secretaria da Fazenda do seu estado',
+        details: [
+          'Alíquotas variam por estado: geralmente 1% a 4% sobre o valor venal do veículo',
+          'Valor venal: baseado na Tabela FIPE ou tabela estadual',
+          'Carros de passeio: tipicamente 3% a 4%',
+          'Motos: geralmente 2% a 3%',
+          'Caminhões e utilitários: 1% a 2%',
+          'Isenções comuns: veículos com mais de 15-20 anos, táxis, pessoas com deficiência, veículos de entidades beneficentes',
+          'Calendário de vencimento varia por estado, geralmente escalonado pelo final da placa',
+          'Desconto para pagamento em cota única ou antecipado (varia por estado)',
+          '50% da receita fica com o estado, 50% com o município onde o veículo está licenciado'
+        ],
+        faqs: [
+          {
+            question: 'Como é calculado o IPVA?',
+            answer: 'Base de cálculo: valor venal do veículo (conforme Tabela FIPE ou tabela do estado). Alíquota: varia por estado e tipo de veículo (1% a 4%). Exemplo: carro no valor de R$ 50.000 com alíquota de 4% = IPVA de R$ 2.000/ano. Veículos usados têm IPVA menor devido à depreciação.'
+          },
+          {
+            question: 'Qual a alíquota do IPVA?',
+            answer: 'Varia por estado. Exemplos: SP: 4% (carros), 2% (motos), 1,5% (caminhões). RJ: 4% (carros), 2% (motos). MG: 4% (carros), 2% (motos). Veículos movidos a gás/elétricos podem ter desconto. Consulte a Secretaria da Fazenda do seu estado para alíquotas específicas.'
+          },
+          {
+            question: 'Quem está isento de IPVA?',
+            answer: 'Isenções variam por estado. Comuns: veículos com mais de 15-20 anos, táxis, pessoas com deficiência (condutor ou transportado), máquinas agrícolas, entidades filantrópicas, ônibus de transporte coletivo. Veículos elétricos têm isenção em alguns estados (ex: SP até 2025).'
+          },
+          {
+            question: 'Qual o prazo para pagar o IPVA?',
+            answer: 'Varia por estado e final da placa. Geralmente: Janeiro a Maio, escalonado. Exemplo SP: placa final 1 em janeiro, 2 em fevereiro, etc. Desconto de 3% a 10% para pagamento em cota única (varia por estado). Parcelamento: geralmente 3 a 5 vezes sem juros.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'itcmd',
+      name: 'ITCMD',
+      description: 'Imposto sobre Transmissão Causa Mortis e Doação',
+      icon: 'GiftIcon',
+      content: {
+        title: 'ITCMD - Imposto sobre Transmissão Causa Mortis e Doação',
+        summary: 'O ITCMD (ou ITCD) é um imposto estadual que incide sobre a transmissão de bens e direitos por herança (causa mortis) ou doação. Cada estado tem sua própria legislação, alíquotas e isenções.',
+        periodicity: 'Por evento (herança ou doação)',
+        legalBasis: 'Constituição Federal art. 155, I e legislação estadual',
+        reference: 'Secretaria da Fazenda do seu estado',
+        details: [
+          'Alíquotas variam por estado: de 2% a 8% sobre o valor do bem',
+          'Progressividade: alguns estados têm alíquotas progressivas conforme o valor (SP, RJ, MG)',
+          'Incide sobre: herança, legado, doação de bens móveis e imóveis, direitos',
+          'Fato gerador: falecimento (causa mortis) ou ato de doação',
+          'Isenções comuns: pequenas heranças (até determinado valor), doações para entidades beneficentes, alguns estados isentam imóveis de baixo valor',
+          'Alíquota máxima constitucional: 8% (Senado pode definir)',
+          'Base de cálculo: valor venal do imóvel (IPTU) ou valor de mercado declarado',
+          'Obrigatório para abertura de inventário e lavratura de escritura de doação'
+        ],
+        faqs: [
+          {
+            question: 'Como é calculado o ITCMD?',
+            answer: 'Base de cálculo: valor venal (imóveis) ou valor de mercado (bens móveis, direitos) dos bens transmitidos. Alíquota: 2% a 8% conforme estado e valor. Exemplo SP: alíquota progressiva de 4% até R$ 150.000, depois 6% e 8% (limites atualizados). É pago antes da formalização da transferência (inventário/escritura).'
+          },
+          {
+            question: 'Qual a alíquota do ITCMD?',
+            answer: 'Varia por estado. SP: 4%, 6% ou 8% (progressivo). RJ: 4%, 5%, 6%, 7% ou 8% (progressivo). MG: 5% (até determinado valor) e 8% acima. Estados menores: geralmente 4% a 6% fixo. Consulte a legislação do estado onde estão localizados os bens (imóveis) ou onde residia o falecido.'
+          },
+          {
+            question: 'Doação de dinheiro paga ITCMD?',
+            answer: 'Sim. Doação de dinheiro, veículos, imóveis, cotas sociais, ações, etc., sofre incidência de ITCMD. O doador ou donatário (conforme estado) deve declarar e recolher o imposto. Exceção: doações de pequeno valor (limite varia por estado) podem ter isenção. Sem comprovante de pagamento, não se lavra escritura.'
+          },
+          {
+            question: 'Quando devo pagar o ITCMD?',
+            answer: 'Herança: antes da finalização do inventário (judicial ou extrajudicial). Doação: antes da lavratura da escritura pública. O cartório/juiz exige comprovante de pagamento do ITCMD para prosseguir. Prazo varia por estado, geralmente 30 a 180 dias após falecimento ou doação (com multa e juros após o prazo).'
+          }
+        ]
+      }
+    },
+    {
+      id: 'iptu',
+      name: 'IPTU',
+      description: 'Imposto Predial e Territorial Urbano',
+      icon: 'HomeIcon',
+      content: {
+        title: 'IPTU - Imposto Predial e Territorial Urbano',
+        summary: 'O IPTU é um imposto municipal que incide sobre a propriedade de imóveis urbanos (casas, apartamentos, terrenos, prédios comerciais). Cada município define suas próprias alíquotas, planta de valores e calendário.',
+        periodicity: 'Anual - conforme calendário municipal',
+        legalBasis: 'Constituição Federal art. 156, I e legislação municipal (Código Tributário Municipal)',
+        reference: 'Prefeitura do município onde o imóvel está localizado',
+        details: [
+          'Alíquotas variam por município e tipo de imóvel: geralmente 0,5% a 2% do valor venal',
+          'Valor venal: determinado pela planta genérica de valores do município (preço de mercado estimado)',
+          'Alíquotas diferenciadas: residencial (menor), comercial (média), terreno baldio (maior - função social)',
+          'Progressividade: IPTU pode ser progressivo no tempo para terrenos não edificados/subutilizados',
+          'Isenções: imóveis de entidades beneficentes, templos religiosos, aposentados/pensionistas (conforme lei municipal)',
+          'Descontos: pagamento em cota única ou antecipado (5% a 20% conforme município)',
+          'Parcelamento: geralmente 10 a 12 vezes sem juros',
+          'Calendário: geralmente janeiro a dezembro, conforme número de inscrição ou bairro'
+        ],
+        faqs: [
+          {
+            question: 'Como é calculado o IPTU?',
+            answer: 'Base de cálculo: valor venal do imóvel (definido pela prefeitura na planta de valores, baseado em localização, área, padrão construtivo). Alíquota: varia por município (0,5% a 2%). Exemplo: imóvel com valor venal de R$ 300.000 e alíquota de 1% = IPTU de R$ 3.000/ano.'
+          },
+          {
+            question: 'Qual a alíquota do IPTU?',
+            answer: 'Varia por município e tipo de imóvel. São Paulo (capital): 0,5% a 1,7% (residencial), até 3% (terrenos). Rio de Janeiro: 0,6% a 2,2%. Capitais tendem a ter alíquotas maiores. Municípios pequenos: 0,5% a 1,5%. Terrenos baldios costumam ter alíquota majorada para cumprir função social.'
+          },
+          {
+            question: 'Quem tem isenção de IPTU?',
+            answer: 'Isenções variam por município. Comuns: aposentados/pensionistas com renda até X salários mínimos e único imóvel até certo valor; imóveis de entidades religiosas, culturais, educacionais sem fins lucrativos; alguns municípios isentam imóveis de baixo valor ou áreas de preservação.'
+          },
+          {
+            question: 'Posso parcelar o IPTU?',
+            answer: 'Sim. Quase todos os municípios permitem parcelamento em 10 a 12 vezes sem juros. Pagamento em cota única geralmente tem desconto de 5% a 20%. O carnê é enviado pelo correio ou disponível para impressão no site da prefeitura. Débitos atrasados podem ser parcelados com juros e multa.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'itbi',
+      name: 'ITBI',
+      description: 'Imposto sobre Transmissão de Bens Imóveis',
+      icon: 'BuildingOfficeIcon',
+      content: {
+        title: 'ITBI - Imposto sobre Transmissão de Bens Imóveis',
+        summary: 'O ITBI (ou ITIV) é um imposto municipal que incide sobre a transmissão onerosa de imóveis (compra e venda, permuta, etc.). É pago uma única vez na transferência da propriedade e é condição para registro no cartório.',
+        periodicity: 'Por evento (na compra/venda de imóvel)',
+        legalBasis: 'Constituição Federal art. 156, II e legislação municipal (Código Tributário Municipal)',
+        reference: 'Prefeitura do município onde o imóvel está localizado',
+        details: [
+          'Alíquotas variam por município: geralmente 2% a 3% sobre o valor do imóvel',
+          'Base de cálculo: valor venal (conforme avaliação da prefeitura) ou valor de transação, o que for maior',
+          'Fato gerador: transmissão onerosa (compra e venda, permuta, dação em pagamento, etc.)',
+          'Não incide sobre: herança ou doação (incide ITCMD estadual nesses casos)',
+          'Responsável: comprador (adquirente), salvo convenção em contrário',
+          'Obrigatório para registro da escritura no Cartório de Registro de Imóveis',
+          'Isenções: incorporação imobiliária ao patrimônio de PJ (realização de capital), alguns municípios isentam programas habitacionais',
+          'Pagamento: geralmente à vista, antes do registro da escritura'
+        ],
+        faqs: [
+          {
+            question: 'Como é calculado o ITBI?',
+            answer: 'Base de cálculo: maior valor entre o declarado na transação e o valor venal de referência da prefeitura. Alíquota: geralmente 2% a 3% conforme município. Exemplo: compra de imóvel por R$ 400.000 em município com ITBI de 2,5% = R$ 10.000. É pago antes do registro em cartório.'
+          },
+          {
+            question: 'Qual a diferença entre ITBI e ITCMD?',
+            answer: 'ITBI é municipal, incide sobre transmissões onerosas (compra e venda) e alíquota geralmente 2-3%. ITCMD é estadual, incide sobre transmissões gratuitas (herança e doação) e alíquota geralmente 4-8%. Comprou o imóvel = ITBI. Recebeu por herança ou doação = ITCMD.'
+          },
+          {
+            question: 'Quando devo pagar o ITBI?',
+            answer: 'Antes do registro da escritura no Cartório de Registro de Imóveis. O fluxo: assina escritura no cartório de notas → emite guia de ITBI na prefeitura → paga ITBI → apresenta comprovante no cartório de registro → cartório registra a transferência. Sem ITBI pago, não há registro.'
+          },
+          {
+            question: 'Financiamento imobiliário paga ITBI?',
+            answer: 'Sim. O ITBI incide normalmente sobre o valor total do imóvel, independente de ser à vista ou financiado. O comprador deve pagar o ITBI com recursos próprios antes de registrar a escritura e a hipoteca. Alguns programas habitacionais (Minha Casa Minha Vida) podem ter isenção conforme município.'
+          }
+        ]
+      }
+    },
+    {
       id: 'reforma-tributaria',
       name: 'Reforma Tributária',
       description: 'Nova estrutura tributária brasileira - IBS, CBS e Imposto Seletivo',
