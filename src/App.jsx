@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { HelmetProvider } from '@dr.pogodin/react-helmet';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -7,34 +7,53 @@ import CategoryPage from './pages/CategoryPage';
 import ResourcePage from './pages/ResourcePage';
 import CNAESearch from './pages/CNAESearch';
 import SearchResults from './pages/SearchResults';
+import AIAssistant from './pages/AIAssistant';
+
+function AppContent() {
+  const location = useLocation();
+  const isAIAssistant = location.pathname === '/assistente-ia' || location.pathname === '/ia';
+
+  if (isAIAssistant) {
+    return (
+      <Routes>
+        <Route path="/assistente-ia" element={<AIAssistant />} />
+        <Route path="/ia" element={<AIAssistant />} />
+      </Routes>
+    );
+  }
+
+  return (
+    <div className="min-h-screen flex flex-col bg-gray-50">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<SearchResults />} />
+        <Route path="/obrigacoes/nacionais" element={<CategoryPage />} />
+        <Route path="/obrigacoes/estaduais" element={<CategoryPage />} />
+        <Route path="/obrigacoes/municipais" element={<CategoryPage />} />
+        <Route path="/obrigacoes/trabalhistas" element={<CategoryPage />} />
+        <Route path="/impostos" element={<CategoryPage />} />
+        <Route path="/impostos/:type/:id" element={<ResourcePage />} />
+        <Route path="/calculadoras" element={<CategoryPage />} />
+        <Route path="/calculadora-inss" element={<CategoryPage />} />
+        <Route path="/calculadora-irrf" element={<CategoryPage />} />
+        <Route path="/calculadora-simples" element={<CategoryPage />} />
+        <Route path="/calculadora-multa" element={<CategoryPage />} />
+        <Route path="/calculadora-juros" element={<CategoryPage />} />
+        <Route path="/calculadora-dimob" element={<CategoryPage />} />
+        <Route path="/cnae" element={<CNAESearch />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
+}
 
 function App() {
   return (
     <HelmetProvider>
       <Router>
-        <div className="min-h-screen flex flex-col bg-gray-50">
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/search" element={<SearchResults />} />
-            <Route path="/obrigacoes/nacionais" element={<CategoryPage />} />
-            <Route path="/obrigacoes/estaduais" element={<CategoryPage />} />
-            <Route path="/obrigacoes/municipais" element={<CategoryPage />} />
-            <Route path="/obrigacoes/trabalhistas" element={<CategoryPage />} />
-            <Route path="/impostos" element={<CategoryPage />} />
-            <Route path="/impostos/:type/:id" element={<ResourcePage />} />
-            <Route path="/calculadoras" element={<CategoryPage />} />
-            <Route path="/calculadora-inss" element={<CategoryPage />} />
-            <Route path="/calculadora-irrf" element={<CategoryPage />} />
-            <Route path="/calculadora-simples" element={<CategoryPage />} />
-            <Route path="/calculadora-multa" element={<CategoryPage />} />
-            <Route path="/calculadora-juros" element={<CategoryPage />} />
-            <Route path="/calculadora-dimob" element={<CategoryPage />} />
-            <Route path="/cnae" element={<CNAESearch />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-          <Footer />
-        </div>
+        <AppContent />
       </Router>
     </HelmetProvider>
   );
