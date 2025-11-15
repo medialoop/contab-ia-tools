@@ -7,16 +7,23 @@ export default function ResourcePage() {
   const { type, id } = useParams();
   const navigate = useNavigate();
 
+  // Determine which category we're in based on current URL
+  const currentPath = window.location.pathname;
+  const category = currentPath.startsWith('/documentos') ? 'documentos' : 'impostos';
+  const categoryResources = category === 'documentos' ? obligationsData.documentosResources : obligationsData.impostosResources;
+  const categoryPath = `/${category}`;
+  const categoryName = category === 'documentos' ? 'Documentos e Formulários' : 'Impostos';
+
   // Find the resource based on type and id
   let resource = null;
   let resourceType = '';
 
-  if (obligationsData.impostosResources) {
+  if (categoryResources) {
     if (type === 'links') {
-      resource = obligationsData.impostosResources.links.find(r => r.id === `link-${id}`);
+      resource = categoryResources.links.find(r => r.id === `link-${id}`);
       resourceType = 'Link';
     } else if (type === 'downloads') {
-      resource = obligationsData.impostosResources.downloads.find(r => r.id === `download-${id}`);
+      resource = categoryResources.downloads.find(r => r.id === `download-${id}`);
       resourceType = 'Download';
     }
   }
@@ -27,10 +34,10 @@ export default function ResourcePage() {
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Recurso não encontrado</h1>
           <button
-            onClick={() => navigate('/impostos')}
+            onClick={() => navigate(categoryPath)}
             className="text-primary-600 hover:text-primary-700 font-medium"
           >
-            Voltar para Impostos
+            Voltar para {categoryName}
           </button>
         </div>
       </div>
@@ -51,11 +58,11 @@ export default function ResourcePage() {
         <div className="max-w-4xl mx-auto">
           {/* Back Button */}
           <button
-            onClick={() => navigate('/impostos')}
+            onClick={() => navigate(categoryPath)}
             className="mb-6 flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors"
           >
             <ArrowLeftIcon className="w-5 h-5" />
-            Voltar para Impostos
+            Voltar para {categoryName}
           </button>
 
           {/* Main Card */}
@@ -217,7 +224,7 @@ export default function ResourcePage() {
                   </a>
                 )}
                 <button
-                  onClick={() => navigate('/impostos')}
+                  onClick={() => navigate(categoryPath)}
                   className="px-6 py-3 bg-white text-gray-700 font-semibold rounded-lg border-2 border-gray-300 hover:border-gray-400 transition-colors"
                 >
                   Voltar

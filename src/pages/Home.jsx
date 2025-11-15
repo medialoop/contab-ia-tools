@@ -175,6 +175,25 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+
+            <Link
+              to="/documentos"
+              className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-200 p-6 border-2 border-transparent hover:border-primary-500"
+            >
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0 p-3 bg-primary-100 rounded-lg group-hover:bg-primary-500 transition-colors duration-200">
+                  <DocumentTextIcon className="w-8 h-8 text-primary-600 group-hover:text-white transition-colors duration-200" />
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors duration-200">
+                    Documentos e Formulários
+                  </h3>
+                  <p className="text-gray-600">
+                    Formulários, modelos e documentos essenciais: DARF, GPS, contratos, balanços, manuais SPED e tabelas
+                  </p>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
 
