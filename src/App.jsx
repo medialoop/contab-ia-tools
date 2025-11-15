@@ -46,6 +46,15 @@ function AppContent() {
         {/* Impostos category index */}
         <Route path="/impostos" element={<CategoryPage />} />
 
+        {/* Documentos resources (more specific routes first) */}
+        <Route path="/documentos/:type/:id" element={<ResourcePage />} />
+
+        {/* Individual documento routes */}
+        <Route path="/documentos/:id" element={<DetailPage />} />
+
+        {/* Documentos category index */}
+        <Route path="/documentos" element={<CategoryPage />} />
+
         {/* Calculators */}
         <Route path="/calculadoras" element={<CategoryPage />} />
         <Route path="/calculadora-inss" element={<CategoryPage />} />

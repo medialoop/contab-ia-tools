@@ -1796,6 +1796,139 @@ export const obligationsData = {
       }
     ]
   },
+  documentosResources: {
+    links: [
+      {
+        id: 'link-portal-esocial',
+        name: 'Portal eSocial',
+        description: 'Acesse manuais, leiautes e documentação técnica do eSocial',
+        icon: 'LinkIcon',
+        url: '/documentos/links/portal-esocial',
+        externalUrl: 'https://www.gov.br/esocial/pt-br',
+        category: 'Portal Governamental'
+      },
+      {
+        id: 'link-portal-nfe',
+        name: 'Portal da NF-e',
+        description: 'Manuais, esquemas XML e documentação da Nota Fiscal Eletrônica',
+        icon: 'LinkIcon',
+        url: '/documentos/links/portal-nfe',
+        externalUrl: 'https://www.nfe.fazenda.gov.br',
+        category: 'Portal Governamental'
+      },
+      {
+        id: 'link-crc',
+        name: 'Conselho Regional de Contabilidade',
+        description: 'Acesse normas, resoluções e orientações do CRC',
+        icon: 'LinkIcon',
+        url: '/documentos/links/crc',
+        externalUrl: 'https://cfc.org.br',
+        category: 'Órgão de Classe'
+      }
+    ],
+    downloads: [
+      {
+        id: 'download-formulario-darf',
+        name: 'Formulário DARF',
+        description: 'Documento de Arrecadação de Receitas Federais em branco para preenchimento',
+        icon: 'ArrowDownTrayIcon',
+        url: '/documentos/downloads/formulario-darf',
+        fileType: 'PDF',
+        fileSize: '95 KB',
+        category: 'Formulários'
+      },
+      {
+        id: 'download-formulario-gps',
+        name: 'Formulário GPS',
+        description: 'Guia da Previdência Social em branco para preenchimento',
+        icon: 'ArrowDownTrayIcon',
+        url: '/documentos/downloads/formulario-gps',
+        fileType: 'PDF',
+        fileSize: '82 KB',
+        category: 'Formulários'
+      },
+      {
+        id: 'download-modelo-contrato-social',
+        name: 'Modelo de Contrato Social',
+        description: 'Modelo atualizado de contrato social para constituição de empresas',
+        icon: 'ArrowDownTrayIcon',
+        url: '/documentos/downloads/modelo-contrato-social',
+        fileType: 'DOCX',
+        fileSize: '45 KB',
+        category: 'Modelos'
+      },
+      {
+        id: 'download-modelo-balanco',
+        name: 'Modelo de Balanço Patrimonial',
+        description: 'Template de balanço patrimonial conforme padrão CPC',
+        icon: 'ArrowDownTrayIcon',
+        url: '/documentos/downloads/modelo-balanco',
+        fileType: 'XLSX',
+        fileSize: '128 KB',
+        category: 'Modelos'
+      },
+      {
+        id: 'download-modelo-dre',
+        name: 'Modelo de DRE',
+        description: 'Template de Demonstração do Resultado do Exercício',
+        icon: 'ArrowDownTrayIcon',
+        url: '/documentos/downloads/modelo-dre',
+        fileType: 'XLSX',
+        fileSize: '95 KB',
+        category: 'Modelos'
+      },
+      {
+        id: 'download-plano-contas',
+        name: 'Plano de Contas Referencial',
+        description: 'Plano de contas padrão para empresas do Lucro Real',
+        icon: 'ArrowDownTrayIcon',
+        url: '/documentos/downloads/plano-contas',
+        fileType: 'PDF',
+        fileSize: '520 KB',
+        category: 'Guias e Manuais'
+      },
+      {
+        id: 'download-procuracao-rfb',
+        name: 'Modelo de Procuração RFB',
+        description: 'Modelo de procuração para representação perante a Receita Federal',
+        icon: 'ArrowDownTrayIcon',
+        url: '/documentos/downloads/procuracao-rfb',
+        fileType: 'DOCX',
+        fileSize: '38 KB',
+        category: 'Formulários'
+      },
+      {
+        id: 'download-tabela-ncm',
+        name: 'Tabela NCM Completa',
+        description: 'Nomenclatura Comum do Mercosul atualizada',
+        icon: 'ArrowDownTrayIcon',
+        url: '/documentos/downloads/tabela-ncm',
+        fileType: 'XLSX',
+        fileSize: '2.8 MB',
+        category: 'Tabelas e Alíquotas'
+      },
+      {
+        id: 'download-manual-sped-fiscal',
+        name: 'Manual SPED Fiscal',
+        description: 'Guia completo para escrituração do SPED Fiscal (EFD-ICMS/IPI)',
+        icon: 'ArrowDownTrayIcon',
+        url: '/documentos/downloads/manual-sped-fiscal',
+        fileType: 'PDF',
+        fileSize: '4.2 MB',
+        category: 'Guias e Manuais'
+      },
+      {
+        id: 'download-manual-sped-contabil',
+        name: 'Manual SPED Contábil',
+        description: 'Guia de orientação para ECD - Escrituração Contábil Digital',
+        icon: 'ArrowDownTrayIcon',
+        url: '/documentos/downloads/manual-sped-contabil',
+        fileType: 'PDF',
+        fileSize: '3.1 MB',
+        category: 'Guias e Manuais'
+      }
+    ]
+  },
   calculadoras: [
     {
       id: 'calc-inss',
@@ -1854,6 +1987,7 @@ export const categories = [
   { id: 'municipais', name: 'Obrigações Municipais', path: '/obrigacoes/municipais', description: 'Declarações municipais: DIMOB, NFS-e, DES/DMISS/DIM e Livro Fiscal Eletrônico' },
   { id: 'trabalhistas', name: 'Obrigações Trabalhistas', path: '/obrigacoes/trabalhistas', description: 'Obrigações relacionadas a empregados: RAIS, GFIP, CAGED e eSocial Trabalhista' },
   { id: 'impostos', name: 'Impostos', path: '/impostos', description: 'Informações sobre os principais impostos: IRPJ, CSLL, PIS, COFINS, IPI, ICMS, ISS, INSS e FGTS' },
+  { id: 'documentos', name: 'Documentos e Formulários', path: '/documentos', description: 'Formulários, modelos e documentos essenciais: DARF, GPS, contratos, balanços, manuais SPED e tabelas' },
   { id: 'calculadoras', name: 'Calculadoras', path: '/calculadoras', description: 'Ferramentas de cálculo: INSS, IRRF, Simples Nacional, Multas, Juros e DIMOB' },
   { id: 'cnae', name: 'Consulta CNAE', path: '/cnae', description: 'Busque códigos CNAE e suas descrições na base de dados oficial do IBGE' },
 ];

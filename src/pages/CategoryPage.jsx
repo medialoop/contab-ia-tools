@@ -59,10 +59,14 @@ export default function CategoryPage() {
 
   const isCalculator = selectedItem?.type === 'calculator';
 
-  // Get resources for impostos category
-  const hasResources = category === 'impostos' && obligationsData.impostosResources;
-  const links = hasResources ? obligationsData.impostosResources.links : [];
-  const downloads = hasResources ? obligationsData.impostosResources.downloads : [];
+  // Get resources for impostos and documentos categories
+  const hasResources = (category === 'impostos' && obligationsData.impostosResources) ||
+                       (category === 'documentos' && obligationsData.documentosResources);
+  const resourcesData = category === 'impostos' ? obligationsData.impostosResources :
+                        category === 'documentos' ? obligationsData.documentosResources :
+                        null;
+  const links = hasResources && resourcesData ? resourcesData.links : [];
+  const downloads = hasResources && resourcesData ? resourcesData.downloads : [];
 
   return (
     <>
