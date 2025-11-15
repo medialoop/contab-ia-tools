@@ -35,23 +35,25 @@ export default function Header() {
       <nav className="border-t border-primary-950 bg-primary-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center space-x-2 overflow-x-auto">
-            {categories.map((category) => (
-              <Link
-                key={category.id}
-                to={category.path}
-                className={`
-                  py-3 px-6 inline-flex items-center font-heading font-medium text-sm whitespace-nowrap
-                  transition-all duration-200 rounded-t-lg relative
-                  ${
-                    isActive(category.path)
-                      ? 'bg-primary-700 text-white shadow-sm border-b-2 border-white'
-                      : 'text-blue-100 hover:text-white hover:bg-primary-800'
-                  }
-                `}
-              >
-                {category.name}
-              </Link>
-            ))}
+            {categories
+              .filter(category => !['impostos', 'cnae'].includes(category.id))
+              .map((category) => (
+                <Link
+                  key={category.id}
+                  to={category.path}
+                  className={`
+                    py-3 px-6 inline-flex items-center font-heading font-medium text-sm whitespace-nowrap
+                    transition-all duration-200 rounded-t-lg relative
+                    ${
+                      isActive(category.path)
+                        ? 'bg-primary-700 text-white shadow-sm border-b-2 border-white'
+                        : 'text-blue-100 hover:text-white hover:bg-primary-800'
+                    }
+                  `}
+                >
+                  {category.name}
+                </Link>
+              ))}
           </div>
         </div>
       </nav>
