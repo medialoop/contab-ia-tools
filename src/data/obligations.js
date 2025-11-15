@@ -1358,6 +1358,117 @@ export const obligationsData = {
       }
     }
   ],
+  impostosResources: {
+    links: [
+      {
+        id: 'link-receita-federal',
+        name: 'Portal da Receita Federal',
+        description: 'Acesse o portal oficial da Receita Federal para consultar legislação, emitir guias e acompanhar processos',
+        icon: 'LinkIcon',
+        url: '/impostos/links/receita-federal',
+        externalUrl: 'https://www.gov.br/receitafederal',
+        category: 'Portal Governamental'
+      },
+      {
+        id: 'link-simples-nacional',
+        name: 'Portal do Simples Nacional',
+        description: 'Central de serviços do Simples Nacional para MEI, ME e EPP',
+        icon: 'LinkIcon',
+        url: '/impostos/links/simples-nacional',
+        externalUrl: 'https://www8.receita.fazenda.gov.br/SimplesNacional',
+        category: 'Portal Governamental'
+      },
+      {
+        id: 'link-reforma-tributaria',
+        name: 'Reforma Tributária - Informações Oficiais',
+        description: 'Documentação completa sobre a Reforma Tributária (EC 132/2023)',
+        icon: 'LinkIcon',
+        url: '/impostos/links/reforma-tributaria',
+        externalUrl: 'https://www.gov.br/fazenda/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria',
+        category: 'Legislação'
+      },
+      {
+        id: 'link-confaz',
+        name: 'Portal CONFAZ',
+        description: 'Conselho Nacional de Política Fazendária - Legislação de ICMS',
+        icon: 'LinkIcon',
+        url: '/impostos/links/confaz',
+        externalUrl: 'https://www.confaz.fazenda.gov.br',
+        category: 'Portal Governamental'
+      },
+      {
+        id: 'link-sped',
+        name: 'Portal SPED',
+        description: 'Sistema Público de Escrituração Digital - Legislação e manuais',
+        icon: 'LinkIcon',
+        url: '/impostos/links/sped',
+        externalUrl: 'https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/sped-sistema-publico-de-escrituracao-digital',
+        category: 'Sistema Fiscal'
+      }
+    ],
+    downloads: [
+      {
+        id: 'download-tabela-irpj',
+        name: 'Tabela de Alíquotas IRPJ/CSLL',
+        description: 'Tabela completa com alíquotas de IRPJ e CSLL por regime tributário (PDF)',
+        icon: 'ArrowDownTrayIcon',
+        url: '/impostos/downloads/tabela-irpj',
+        fileType: 'PDF',
+        fileSize: '245 KB',
+        category: 'Tabelas e Alíquotas'
+      },
+      {
+        id: 'download-calendarios',
+        name: 'Calendário de Obrigações 2025',
+        description: 'Calendário completo de vencimentos de impostos e obrigações acessórias',
+        icon: 'ArrowDownTrayIcon',
+        url: '/impostos/downloads/calendario-2025',
+        fileType: 'PDF',
+        fileSize: '1.2 MB',
+        category: 'Calendários'
+      },
+      {
+        id: 'download-guia-reforma',
+        name: 'Guia Prático da Reforma Tributária',
+        description: 'Manual explicativo sobre as mudanças da Reforma Tributária (EC 132/2023)',
+        icon: 'ArrowDownTrayIcon',
+        url: '/impostos/downloads/guia-reforma',
+        fileType: 'PDF',
+        fileSize: '3.5 MB',
+        category: 'Guias e Manuais'
+      },
+      {
+        id: 'download-planilha-simples',
+        name: 'Planilha de Cálculo - Simples Nacional',
+        description: 'Planilha Excel para cálculo de tributos do Simples Nacional',
+        icon: 'ArrowDownTrayIcon',
+        url: '/impostos/downloads/planilha-simples',
+        fileType: 'XLSX',
+        fileSize: '156 KB',
+        category: 'Planilhas'
+      },
+      {
+        id: 'download-checklist',
+        name: 'Checklist Mensal de Impostos',
+        description: 'Lista de verificação para não esquecer nenhuma obrigação tributária',
+        icon: 'ArrowDownTrayIcon',
+        url: '/impostos/downloads/checklist',
+        fileType: 'PDF',
+        fileSize: '180 KB',
+        category: 'Checklists'
+      },
+      {
+        id: 'download-tabela-pis-cofins',
+        name: 'Tabela PIS/COFINS - Regimes Cumulativo e Não-Cumulativo',
+        description: 'Comparativo de alíquotas e regras para PIS e COFINS',
+        icon: 'ArrowDownTrayIcon',
+        url: '/impostos/downloads/tabela-pis-cofins',
+        fileType: 'PDF',
+        fileSize: '320 KB',
+        category: 'Tabelas e Alíquotas'
+      }
+    ]
+  },
   calculadoras: [
     {
       id: 'calc-inss',

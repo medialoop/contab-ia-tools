@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from '@dr.pogodin/react-helmet';
 import ObligationCard from '../components/ObligationCard';
+import ResourceCard from '../components/ResourceCard';
 import Chatbot from '../components/Chatbot';
 import CalculatorWrapper from '../components/calculators/CalculatorWrapper';
 import DeadlineCalendar from '../components/DeadlineCalendar';
@@ -9,6 +10,7 @@ import { obligationsData, categories } from '../data/obligations';
 
 export default function CategoryPage() {
   const location = useLocation();
+  const navigate = useNavigate();
   // Extract category from path (e.g., /obrigacoes/nacionais -> nacionais, /calculadoras -> calculadoras)
   const pathParts = location.pathname.split('/').filter(Boolean);
   let category = pathParts.length > 1 ? pathParts[1] : pathParts[0];
@@ -51,7 +53,16 @@ export default function CategoryPage() {
     setSelectedItem(item);
   };
 
+  const handleResourceClick = (resource) => {
+    navigate(resource.url);
+  };
+
   const isCalculator = selectedItem?.type === 'calculator';
+
+  // Get resources for impostos category
+  const hasResources = category === 'impostos' && obligationsData.impostosResources;
+  const links = hasResources ? obligationsData.impostosResources.links : [];
+  const downloads = hasResources ? obligationsData.impostosResources.downloads : [];
 
   return (
     <>
@@ -103,6 +114,55 @@ export default function CategoryPage() {
                     />
                   ))}
                 </div>
+
+                {/* Resources Section - Links and Downloads for Impostos */}
+                {hasResources && (
+                  <>
+                    {/* Links Section */}
+                    {links.length > 0 && (
+                      <div className="mb-6">
+                        <h2 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                          <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                          </svg>
+                          Links Úteis
+                        </h2>
+                        <div className="grid gap-4">
+                          {links.map((link) => (
+                            <ResourceCard
+                              key={link.id}
+                              resource={link}
+                              type="link"
+                              onClick={handleResourceClick}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Downloads Section */}
+                    {downloads.length > 0 && (
+                      <div className="mb-6">
+                        <h2 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                          <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          Downloads
+                        </h2>
+                        <div className="grid gap-4">
+                          {downloads.map((download) => (
+                            <ResourceCard
+                              key={download.id}
+                              resource={download}
+                              type="download"
+                              onClick={handleResourceClick}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </>
+                )}
 
                 {/* Calendar - Only show for non-calculator categories */}
                 {category !== 'calculadoras' && (

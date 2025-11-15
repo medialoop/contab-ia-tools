@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import CategoryPage from './pages/CategoryPage';
+import ResourcePage from './pages/ResourcePage';
 import CNAESearch from './pages/CNAESearch';
 import SearchResults from './pages/SearchResults';
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/obrigacoes/municipais" element={<CategoryPage />} />
             <Route path="/obrigacoes/trabalhistas" element={<CategoryPage />} />
             <Route path="/impostos" element={<CategoryPage />} />
+            <Route path="/impostos/:type/:id" element={<ResourcePage />} />
             <Route path="/calculadoras" element={<CategoryPage />} />
             <Route path="/calculadora-inss" element={<CategoryPage />} />
             <Route path="/calculadora-irrf" element={<CategoryPage />} />
