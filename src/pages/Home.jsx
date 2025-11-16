@@ -14,6 +14,7 @@ import {
   ArrowDownTrayIcon,
 } from '@heroicons/react/24/outline';
 import { categories } from '../data/obligations';
+import FloatingChatWidget from '../components/FloatingChatWidget';
 
 const categoryIcons = {
   nacionais: DocumentTextIcon,
@@ -51,6 +52,9 @@ export default function Home() {
         <meta property="og:url" content="https://pracontador.com.br/" />
         <link rel="canonical" href="https://pracontador.com.br/" />
       </Helmet>
+
+      {/* Floating Chat Widget */}
+      <FloatingChatWidget />
 
       <div className="flex-1 overflow-y-auto">
         {/* Hero Section */}
