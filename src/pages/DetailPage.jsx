@@ -12,12 +12,14 @@ export default function DetailPage() {
     window.scrollTo(0, 0);
   }, []);
 
-  // Determine if this is impostos or obrigacoes route
+  // Determine the category based on the route
   // For impostos: /impostos/:id (params.id exists, params.category doesn't)
+  // For documentos: /documentos/:id (params.id exists, params.category doesn't)
   // For obrigacoes: /obrigacoes/:category/:id (both params.category and params.id exist)
   const isImpostos = location.pathname.startsWith('/impostos');
-  const categorySlug = isImpostos ? 'impostos' : params.category;
-  const itemId = isImpostos ? params.id : params.id;
+  const isDocumentos = location.pathname.startsWith('/documentos');
+  const categorySlug = isImpostos ? 'impostos' : isDocumentos ? 'documentos' : params.category;
+  const itemId = params.id;
 
   // Find the category data
   const categoryData = categories.find(cat => {
