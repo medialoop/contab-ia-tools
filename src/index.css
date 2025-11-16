@@ -25,3 +25,14 @@
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-400;
 }
+
+/* Hide scrollbar on desktop for navigation menu */
+@media (min-width: 768px) {
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+  nav {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
